@@ -697,6 +697,24 @@ func (this *SyncResource) _xxx_xxx_Validator_Validate_hive_target() error {
 	return nil
 }
 
+func (this *SyncResource) _xxx_xxx_Validator_Validate_oceanbase_source() error {
+	if dt, ok := interface{}(this.OceanBaseSource).(interface{ Validate() error }); ok {
+		if err := dt.Validate(); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
+func (this *SyncResource) _xxx_xxx_Validator_Validate_oceanbase_target() error {
+	if dt, ok := interface{}(this.OceanBaseTarget).(interface{ Validate() error }); ok {
+		if err := dt.Validate(); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
 // Set default value for message model.SyncResource
 func (this *SyncResource) Validate() error {
 	if this == nil {
@@ -796,6 +814,12 @@ func (this *SyncResource) Validate() error {
 		return err
 	}
 	if err := this._xxx_xxx_Validator_Validate_hive_target(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_oceanbase_source(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_oceanbase_target(); err != nil {
 		return err
 	}
 	return nil

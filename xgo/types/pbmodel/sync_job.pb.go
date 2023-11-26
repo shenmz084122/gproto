@@ -960,6 +960,10 @@ type SyncResource struct {
 	RedisTarget *pbsyncjob.RedisTarget `protobuf:"bytes,31,opt,name=redis_target,json=redisTarget,proto3" json:"redis_target"`
 	// hive target
 	HiveTarget *pbsyncjob.HiveTarget `protobuf:"bytes,32,opt,name=hive_target,json=hiveTarget,proto3" json:"hive_target"`
+	// OceanBase source
+	OceanBaseSource *pbsyncjob.DBSource `protobuf:"bytes,1,opt,name=oceanbase_source,json=oceanbaseSource,proto3" json:"oceanbase_source"`
+	// OceanBase target
+	OceanBaseTarget *pbsyncjob.DBTarget `protobuf:"bytes,2,opt,name=oceanbase_target,json=oceanbaseTarget,proto3" json:"oceanbase_target"`
 }
 
 func (x *SyncResource) Reset() {
@@ -1214,6 +1218,20 @@ func (x *SyncResource) GetRedisTarget() *pbsyncjob.RedisTarget {
 func (x *SyncResource) GetHiveTarget() *pbsyncjob.HiveTarget {
 	if x != nil {
 		return x.HiveTarget
+	}
+	return nil
+}
+
+func (x *SyncResource) GetOceanBaseSource() *pbsyncjob.DBSource {
+	if x != nil {
+		return x.OceanBaseSource
+	}
+	return nil
+}
+
+func (x *SyncResource) GetOceanBaseTarget() *pbsyncjob.DBTarget {
+	if x != nil {
+		return x.OceanBaseTarget
 	}
 	return nil
 }
@@ -2071,11 +2089,13 @@ var file_proto_types_model_sync_job_proto_depIdxs = []int32{
 	7,  // 48: model.SyncJobRelease.status:type_name -> model.SyncJobRelease.Status
 	8,  // 49: model.SyncJobRelease.sync_job:type_name -> model.SyncJob
 	9,  // 50: model.SyncJobRelease.sync_job_property:type_name -> model.SyncJobProperty
-	51, // [51:51] is the sub-list for method output_type
-	51, // [51:51] is the sub-list for method input_type
-	51, // [51:51] is the sub-list for extension type_name
-	51, // [51:51] is the sub-list for extension extendee
-	0,  // [0:51] is the sub-list for field type_name
+	38, // 51: model.SyncResource.oceanbase_source:type_name -> model.DBSource
+	39, // 52: model.SyncResource.oceanbase_target:type_name -> model.DBTarget
+	53, // [53:53] is the sub-list for method output_type
+	53, // [53:53] is the sub-list for method input_type
+	53, // [53:53] is the sub-list for extension type_name
+	53, // [53:53] is the sub-list for extension extendee
+	0,  // [0:53] is the sub-list for field type_name
 }
 
 func init() { file_proto_types_model_sync_job_proto_init() }

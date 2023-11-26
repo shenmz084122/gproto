@@ -51,7 +51,7 @@ func (this *DataSource) _xxx_xxx_Validator_Validate_desc() error {
 	return nil
 }
 
-var _xxx_xxx_Validator_DataSource_InEnums_Type = map[DataSource_Type]bool{0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true}
+var _xxx_xxx_Validator_DataSource_InEnums_Type = map[DataSource_Type]bool{0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true, 17: true}
 
 func (this *DataSource) _xxx_xxx_Validator_Validate_type() error {
 	if !(this.Type > 0) {
@@ -156,7 +156,7 @@ func (this *DataSource) Validate() error {
 	return nil
 }
 
-var _xxx_xxx_Validator_DataSource_URL_InEnums_Type = map[DataSource_Type]bool{0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true}
+var _xxx_xxx_Validator_DataSource_URL_InEnums_Type = map[DataSource_Type]bool{0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true, 17: true}
 
 func (this *DataSource_URL) _xxx_xxx_Validator_Validate_type() error {
 	if !(this.Type > 0) {
@@ -520,6 +520,28 @@ func (this *DataSource_URL) _xxx_xxx_Validator_Validate_redis() error {
 	return nil
 }
 
+func (this *DataSource_URL) _xxx_xxx_Validator_CheckIf_oceanbase() bool {
+	if !(this.Type == 17) {
+		return false
+	}
+	return true
+}
+
+func (this *DataSource_URL) _xxx_xxx_Validator_Validate_oceanbase() error {
+	if !this._xxx_xxx_Validator_CheckIf_oceanbase() {
+		return nil
+	}
+	if !(this.OceanBase != nil) {
+		return protovalidator.FieldError2("DataSource_URL", "the value of field 'oceanbase' cannot be null")
+	}
+	if dt, ok := interface{}(this.OceanBase).(interface{ Validate() error }); ok {
+		if err := dt.Validate(); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
 // Set default value for message model.DataSource.URL
 func (this *DataSource_URL) Validate() error {
 	if this == nil {
@@ -574,6 +596,9 @@ func (this *DataSource_URL) Validate() error {
 		return err
 	}
 	if err := this._xxx_xxx_Validator_Validate_redis(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_oceanbase(); err != nil {
 		return err
 	}
 	return nil
