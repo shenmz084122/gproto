@@ -115,7 +115,7 @@ func (this *DataSource_URL) SetDefaults() {
 		}
 	}
 	if this.OceanBase != nil {
-		if dt, ok := interface{}(this.Redis).(interface{ SetDefaults() }); ok {
+		if dt, ok := interface{}(this.OceanBase).(interface{ SetDefaults() }); ok {
 			dt.SetDefaults()
 		}
 	}
