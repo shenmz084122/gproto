@@ -619,7 +619,7 @@ type DataSource_URL struct {
 	//  REDIS Source Connection Info.
 	Redis *pbdatasource.RedisURL `protobuf:"bytes,16,opt,name=redis,proto3" json:"redis"`
 	//  REDIS Source Connection Info.
-	OceanBase *pbdatasource.OceanBaseURL `protobuf:"bytes,16,opt,name=oceanbase,proto3" json:"oceanbase"`
+	OceanBase *pbdatasource.OceanBaseURL `protobuf:"bytes,17,opt,name=oceanbase,proto3" json:"oceanbase"`
 }
 
 func (x *DataSource_URL) Reset() {
