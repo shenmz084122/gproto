@@ -95,6 +95,7 @@ const (
 	DataSource_ElasticSearch DataSource_Type = 14
 	DataSource_MongoDb       DataSource_Type = 15
 	DataSource_Redis         DataSource_Type = 16
+	DataSource_OceanBase     DataSource_Type = 17
 )
 
 // Enum value maps for DataSource_Type.
