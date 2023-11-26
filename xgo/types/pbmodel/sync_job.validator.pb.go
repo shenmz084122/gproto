@@ -150,8 +150,8 @@ func (this *SyncJob) _xxx_xxx_Validator_Validate_source_type() error {
 	if !(this.SourceType > 0) {
 		return protovalidator.FieldError1("SyncJob", "the value of field 'source_type' must be greater than '0'", protovalidator.Int32ToString(int32(this.SourceType)))
 	}
-	if !(this.SourceType <= 16) {
-		return protovalidator.FieldError1("SyncJob", "the value of field 'source_type' must be less than or equal to '16'", protovalidator.Int32ToString(int32(this.SourceType)))
+	if !(this.SourceType <= 17) {
+		return protovalidator.FieldError1("SyncJob", "the value of field 'source_type' must be less than or equal to '17'", protovalidator.Int32ToString(int32(this.SourceType)))
 	}
 	if !(_xxx_xxx_Validator_SyncJob_InEnums_SourceType[this.SourceType]) {
 		return protovalidator.FieldError1("SyncJob", "the value of field 'source_type' must in enums of '[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17]'", protovalidator.Int32ToString(int32(this.SourceType)))
@@ -175,8 +175,8 @@ func (this *SyncJob) _xxx_xxx_Validator_Validate_target_type() error {
 	if !(this.TargetType > 0) {
 		return protovalidator.FieldError1("SyncJob", "the value of field 'target_type' must be greater than '0'", protovalidator.Int32ToString(int32(this.TargetType)))
 	}
-	if !(this.TargetType <= 16) {
-		return protovalidator.FieldError1("SyncJob", "the value of field 'target_type' must be less than or equal to '16'", protovalidator.Int32ToString(int32(this.TargetType)))
+	if !(this.TargetType <= 17) {
+		return protovalidator.FieldError1("SyncJob", "the value of field 'target_type' must be less than or equal to '17'", protovalidator.Int32ToString(int32(this.TargetType)))
 	}
 	if !(_xxx_xxx_Validator_SyncJob_InEnums_TargetType[this.TargetType]) {
 		return protovalidator.FieldError1("SyncJob", "the value of field 'target_type' must in enums of '[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17]'", protovalidator.Int32ToString(int32(this.TargetType)))
