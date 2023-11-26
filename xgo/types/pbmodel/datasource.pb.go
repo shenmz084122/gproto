@@ -585,7 +585,7 @@ type DataSource_URL struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Source Type, one of 12345678 1->MySQL/2->PostgreSQL/3->Kafka/4->S3/5->ClickHouse/6->Hbase/7->Ftp/8->HDFS
-	Type DataSource_Type `protobuf:"varint,17,opt,name=type,proto3,enum=model.DataSource_Type" json:"-"`
+	Type DataSource_Type `protobuf:"varint,18,opt,name=type,proto3,enum=model.DataSource_Type" json:"-"`
 	// MySQL Source Connection Info.
 	Mysql *pbdatasource.MySQLURL `protobuf:"bytes,1,opt,name=mysql,proto3" json:"mysql"`
 	// PostgreSQL Source Connection Info.

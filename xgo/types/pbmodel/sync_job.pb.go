@@ -961,9 +961,9 @@ type SyncResource struct {
 	// hive target
 	HiveTarget *pbsyncjob.HiveTarget `protobuf:"bytes,32,opt,name=hive_target,json=hiveTarget,proto3" json:"hive_target"`
 	// OceanBase source
-	OceanBaseSource *pbsyncjob.DBSource `protobuf:"bytes,1,opt,name=oceanbase_source,json=oceanbaseSource,proto3" json:"oceanbase_source"`
+	OceanBaseSource *pbsyncjob.DBSource `protobuf:"bytes,33,opt,name=oceanbase_source,json=oceanbaseSource,proto3" json:"oceanbase_source"`
 	// OceanBase target
-	OceanBaseTarget *pbsyncjob.DBTarget `protobuf:"bytes,2,opt,name=oceanbase_target,json=oceanbaseTarget,proto3" json:"oceanbase_target"`
+	OceanBaseTarget *pbsyncjob.DBTarget `protobuf:"bytes,34,opt,name=oceanbase_target,json=oceanbaseTarget,proto3" json:"oceanbase_target"`
 }
 
 func (x *SyncResource) Reset() {
