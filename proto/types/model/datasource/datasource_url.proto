@@ -460,4 +460,7 @@ message OceanBaseURL {
   // Database specifies the database name of db. Is Required. Length Min: 1, Length Max: 64.
   // @inject_tag: json:"database"
   string database = 5 [ (validator.field).tags.string = { byte_len_gte: 1, byte_len_lte: 64 } ];
+
+  string agreement = 6 [ (validator.field).tags.string = { byte_len_gte: 1, byte_len_lte: 64 } ];
+
 }

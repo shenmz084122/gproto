@@ -1052,6 +1052,16 @@ func (this *OceanBaseURL) _xxx_xxx_Validator_Validate_database() error {
 	return nil
 }
 
+func (this *OceanBaseURL) _xxx_xxx_Validator_Validate_agreement() error {
+	if !(len(this.Agreement) >= 1) {
+		return protovalidator.FieldError1("OceanBaseURL", "the byte length of field 'agreement' must be greater than or equal to '1'", protovalidator.StringByteLenToString(this.Agreement))
+	}
+	if !(len(this.Agreement) <= 64) {
+		return protovalidator.FieldError1("OceanBaseURL", "the byte length of field 'agreement' must be less than or equal to '64'", protovalidator.StringByteLenToString(this.Agreement))
+	}
+	return nil
+}
+
 // Set default value for message datasource.OceanBaseURL
 func (this *OceanBaseURL) Validate() error {
 	if this == nil {
@@ -1070,6 +1080,9 @@ func (this *OceanBaseURL) Validate() error {
 		return err
 	}
 	if err := this._xxx_xxx_Validator_Validate_database(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_agreement(); err != nil {
 		return err
 	}
 	return nil
