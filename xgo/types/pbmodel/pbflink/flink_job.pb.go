@@ -22,7 +22,8 @@ const (
 )
 
 // reference:
-//    https://nightlies.apache.org/flink/flink-docs-master/api/java/org/apache/flink/api/common/JobStatus.html
+//
+//	https://nightlies.apache.org/flink/flink-docs-master/api/java/org/apache/flink/api/common/JobStatus.html
 type FlinkJob_Status int32
 
 const (

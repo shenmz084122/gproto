@@ -114,8 +114,8 @@ func (this *DataSource_URL) SetDefaults() {
 			dt.SetDefaults()
 		}
 	}
-	if this.OceanBase != nil {
-		if dt, ok := interface{}(this.OceanBase).(interface{ SetDefaults() }); ok {
+	if this.Oceanbase != nil {
+		if dt, ok := interface{}(this.Oceanbase).(interface{ SetDefaults() }); ok {
 			dt.SetDefaults()
 		}
 	}

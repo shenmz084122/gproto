@@ -321,6 +321,13 @@ message SyncResource {
     // hive target
     // @inject_tag: json:"hive_target"
     HiveTarget hive_target = 32;
+
+    // oceanbase source
+    // @inject_tag: json:"oceanbase_source"
+    DBSource oceanbase_source = 33;
+    // oceanbase target
+    // @inject_tag: json:"oceanbase_target"
+    DBTarget oceanbase_target = 34;
 }
 
 // SyncJobSchedule represents a job schedule info.

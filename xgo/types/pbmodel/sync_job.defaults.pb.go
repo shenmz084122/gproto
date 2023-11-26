@@ -254,13 +254,13 @@ func (this *SyncResource) SetDefaults() {
 			dt.SetDefaults()
 		}
 	}
-	if this.OceanBaseSource != nil {
-		if dt, ok := interface{}(this.OceanBaseSource).(interface{ SetDefaults() }); ok {
+	if this.OceanbaseSource != nil {
+		if dt, ok := interface{}(this.OceanbaseSource).(interface{ SetDefaults() }); ok {
 			dt.SetDefaults()
 		}
 	}
-	if this.OceanBaseTarget != nil {
-		if dt, ok := interface{}(this.OceanBaseTarget).(interface{ SetDefaults() }); ok {
+	if this.OceanbaseTarget != nil {
+		if dt, ok := interface{}(this.OceanbaseTarget).(interface{ SetDefaults() }); ok {
 			dt.SetDefaults()
 		}
 	}

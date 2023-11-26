@@ -141,7 +141,7 @@ func (this *SyncJob) _xxx_xxx_Validator_CheckIf_source_type() bool {
 	return true
 }
 
-var _xxx_xxx_Validator_SyncJob_InEnums_SourceType = map[DataSource_Type]bool{0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true}
+var _xxx_xxx_Validator_SyncJob_InEnums_SourceType = map[DataSource_Type]bool{0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true, 17: true}
 
 func (this *SyncJob) _xxx_xxx_Validator_Validate_source_type() error {
 	if !this._xxx_xxx_Validator_CheckIf_source_type() {
@@ -154,7 +154,7 @@ func (this *SyncJob) _xxx_xxx_Validator_Validate_source_type() error {
 		return protovalidator.FieldError1("SyncJob", "the value of field 'source_type' must be less than or equal to '16'", protovalidator.Int32ToString(int32(this.SourceType)))
 	}
 	if !(_xxx_xxx_Validator_SyncJob_InEnums_SourceType[this.SourceType]) {
-		return protovalidator.FieldError1("SyncJob", "the value of field 'source_type' must in enums of '[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16]'", protovalidator.Int32ToString(int32(this.SourceType)))
+		return protovalidator.FieldError1("SyncJob", "the value of field 'source_type' must in enums of '[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17]'", protovalidator.Int32ToString(int32(this.SourceType)))
 	}
 	return nil
 }
@@ -166,7 +166,7 @@ func (this *SyncJob) _xxx_xxx_Validator_CheckIf_target_type() bool {
 	return true
 }
 
-var _xxx_xxx_Validator_SyncJob_InEnums_TargetType = map[DataSource_Type]bool{0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true}
+var _xxx_xxx_Validator_SyncJob_InEnums_TargetType = map[DataSource_Type]bool{0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true, 17: true}
 
 func (this *SyncJob) _xxx_xxx_Validator_Validate_target_type() error {
 	if !this._xxx_xxx_Validator_CheckIf_target_type() {
@@ -179,7 +179,7 @@ func (this *SyncJob) _xxx_xxx_Validator_Validate_target_type() error {
 		return protovalidator.FieldError1("SyncJob", "the value of field 'target_type' must be less than or equal to '16'", protovalidator.Int32ToString(int32(this.TargetType)))
 	}
 	if !(_xxx_xxx_Validator_SyncJob_InEnums_TargetType[this.TargetType]) {
-		return protovalidator.FieldError1("SyncJob", "the value of field 'target_type' must in enums of '[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16]'", protovalidator.Int32ToString(int32(this.TargetType)))
+		return protovalidator.FieldError1("SyncJob", "the value of field 'target_type' must in enums of '[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17]'", protovalidator.Int32ToString(int32(this.TargetType)))
 	}
 	return nil
 }
@@ -698,7 +698,7 @@ func (this *SyncResource) _xxx_xxx_Validator_Validate_hive_target() error {
 }
 
 func (this *SyncResource) _xxx_xxx_Validator_Validate_oceanbase_source() error {
-	if dt, ok := interface{}(this.OceanBaseSource).(interface{ Validate() error }); ok {
+	if dt, ok := interface{}(this.OceanbaseSource).(interface{ Validate() error }); ok {
 		if err := dt.Validate(); err != nil {
 			return err
 		}
@@ -707,7 +707,7 @@ func (this *SyncResource) _xxx_xxx_Validator_Validate_oceanbase_source() error {
 }
 
 func (this *SyncResource) _xxx_xxx_Validator_Validate_oceanbase_target() error {
-	if dt, ok := interface{}(this.OceanBaseTarget).(interface{ Validate() error }); ok {
+	if dt, ok := interface{}(this.OceanbaseTarget).(interface{ Validate() error }); ok {
 		if err := dt.Validate(); err != nil {
 			return err
 		}
