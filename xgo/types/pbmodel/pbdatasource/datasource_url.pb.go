@@ -1464,6 +1464,90 @@ func (x *RedisURL) GetPassword() string {
 	return ""
 }
 
+type OceanBaseURL struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	// Host specifies the hostname of db. Is Required. Length Min: 1, Length Max: 64.
+	Host string `protobuf:"bytes,1,opt,name=host,proto3" json:"host"`
+	// Port specifies the port of db. Is Required. Min: 0, Length Max: 65536.
+	Port int32 `protobuf:"varint,2,opt,name=port,proto3" json:"port"`
+	// User specifies the username of db. Is Required. Length Min: 1, Length Max: 64.
+	User string `protobuf:"bytes,3,opt,name=user,proto3" json:"user"`
+	// Password specifies the password of db. Is Required. Length Min: 1, Length Max: 64.
+	Password string `protobuf:"bytes,4,opt,name=password,proto3" json:"password"`
+	// Database specifies the database name of db. Is Required. Length Min: 1, Length Max: 64.
+	Database string `protobuf:"bytes,5,opt,name=database,proto3" json:"database"`
+}
+
+func (x *OceanBaseURL) Reset() {
+	*x = OceanBaseURL{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_types_model_datasource_datasource_url_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *OceanBaseURL) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*OceanBaseURL) ProtoMessage() {}
+
+func (x *OceanBaseURL) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_types_model_datasource_datasource_url_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use OceanBaseURL.ProtoReflect.Descriptor instead.
+func (*OceanBaseURL) Descriptor() ([]byte, []int) {
+	return file_proto_types_model_datasource_datasource_url_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *OceanBaseURL) GetHost() string {
+	if x != nil {
+		return x.Host
+	}
+	return ""
+}
+
+func (x *OceanBaseURL) GetPort() int32 {
+	if x != nil {
+		return x.Port
+	}
+	return 0
+}
+
+func (x *OceanBaseURL) GetUser() string {
+	if x != nil {
+		return x.User
+	}
+	return ""
+}
+
+func (x *OceanBaseURL) GetPassword() string {
+	if x != nil {
+		return x.Password
+	}
+	return ""
+}
+
+func (x *OceanBaseURL) GetDatabase() string {
+	if x != nil {
+		return x.Database
+	}
+	return ""
+}
+
 var File_proto_types_model_datasource_datasource_url_proto protoreflect.FileDescriptor
 
 var file_proto_types_model_datasource_datasource_url_proto_rawDesc = []byte{
@@ -1739,6 +1823,7 @@ var file_proto_types_model_datasource_datasource_url_proto_goTypes = []interface
 	(*ElasticSearchURL)(nil),   // 17: datasource.ElasticSearchURL
 	(*MongoDbURL)(nil),         // 18: datasource.MongoDbURL
 	(*RedisURL)(nil),           // 19: datasource.RedisURL
+	(*OceanBaseURL)(nil),       // 20: datasource.OceanBaseURL
 }
 var file_proto_types_model_datasource_datasource_url_proto_depIdxs = []int32{
 	0, // 0: datasource.FtpURL.protocol:type_name -> datasource.FtpURL.Protocol
@@ -1954,6 +2039,18 @@ func file_proto_types_model_datasource_datasource_url_proto_init() {
 		}
 		file_proto_types_model_datasource_datasource_url_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RedisURL); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_types_model_datasource_datasource_url_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*OceanBaseURL); i {
 			case 0:
 				return &v.state
 			case 1:

@@ -1001,3 +1001,76 @@ func (this *RedisURL) Validate() error {
 	}
 	return nil
 }
+
+func (this *OceanBaseURL) _xxx_xxx_Validator_Validate_host() error {
+	if !(len(this.Host) >= 1) {
+		return protovalidator.FieldError1("OceanBaseURL", "the byte length of field 'host' must be greater than or equal to '1'", protovalidator.StringByteLenToString(this.Host))
+	}
+	if !(len(this.Host) <= 64) {
+		return protovalidator.FieldError1("OceanBaseURL", "the byte length of field 'host' must be less than or equal to '64'", protovalidator.StringByteLenToString(this.Host))
+	}
+	return nil
+}
+
+func (this *OceanBaseURL) _xxx_xxx_Validator_Validate_port() error {
+	if !(this.Port >= 0) {
+		return protovalidator.FieldError1("OceanBaseURL", "the value of field 'port' must be greater than or equal to '0'", protovalidator.Int32ToString(this.Port))
+	}
+	if !(this.Port <= 65536) {
+		return protovalidator.FieldError1("OceanBaseURL", "the value of field 'port' must be less than or equal to '65536'", protovalidator.Int32ToString(this.Port))
+	}
+	return nil
+}
+
+func (this *OceanBaseURL) _xxx_xxx_Validator_Validate_user() error {
+	if !(len(this.User) >= 1) {
+		return protovalidator.FieldError1("OceanBaseURL", "the byte length of field 'user' must be greater than or equal to '1'", protovalidator.StringByteLenToString(this.User))
+	}
+	if !(len(this.User) <= 64) {
+		return protovalidator.FieldError1("OceanBaseURL", "the byte length of field 'user' must be less than or equal to '64'", protovalidator.StringByteLenToString(this.User))
+	}
+	return nil
+}
+
+func (this *OceanBaseURL) _xxx_xxx_Validator_Validate_password() error {
+	if !(len(this.Password) >= 1) {
+		return protovalidator.FieldError1("OceanBaseURL", "the byte length of field 'password' must be greater than or equal to '1'", protovalidator.StringByteLenToString(this.Password))
+	}
+	if !(len(this.Password) <= 64) {
+		return protovalidator.FieldError1("OceanBaseURL", "the byte length of field 'password' must be less than or equal to '64'", protovalidator.StringByteLenToString(this.Password))
+	}
+	return nil
+}
+
+func (this *OceanBaseURL) _xxx_xxx_Validator_Validate_database() error {
+	if !(len(this.Database) >= 1) {
+		return protovalidator.FieldError1("OceanBaseURL", "the byte length of field 'database' must be greater than or equal to '1'", protovalidator.StringByteLenToString(this.Database))
+	}
+	if !(len(this.Database) <= 64) {
+		return protovalidator.FieldError1("OceanBaseURL", "the byte length of field 'database' must be less than or equal to '64'", protovalidator.StringByteLenToString(this.Database))
+	}
+	return nil
+}
+
+// Set default value for message datasource.OceanBaseURL
+func (this *OceanBaseURL) Validate() error {
+	if this == nil {
+		return nil
+	}
+	if err := this._xxx_xxx_Validator_Validate_host(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_port(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_user(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_password(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_database(); err != nil {
+		return err
+	}
+	return nil
+}

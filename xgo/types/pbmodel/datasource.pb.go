@@ -118,6 +118,7 @@ var (
 		14: "ElasticSearch",
 		15: "MongoDb",
 		16: "Redis",
+		17: "OceanBase",
 	}
 	DataSource_Type_value = map[string]int32{
 		"TypeUnset":     0,
@@ -137,6 +138,7 @@ var (
 		"ElasticSearch": 14,
 		"MongoDb":       15,
 		"Redis":         16,
+		"OceanBase":     17,
 	}
 )
 
@@ -616,6 +618,8 @@ type DataSource_URL struct {
 	MongoDb *pbdatasource.MongoDbURL `protobuf:"bytes,15,opt,name=mongo_db,json=mongoDb,proto3" json:"mongo_db"`
 	//  REDIS Source Connection Info.
 	Redis *pbdatasource.RedisURL `protobuf:"bytes,16,opt,name=redis,proto3" json:"redis"`
+	//  REDIS Source Connection Info.
+	OceanBase *pbdatasource.OceanBaseURL `protobuf:"bytes,16,opt,name=oceanbase,proto3" json:"oceanbase"`
 }
 
 func (x *DataSource_URL) Reset() {
@@ -765,6 +769,13 @@ func (x *DataSource_URL) GetMongoDb() *pbdatasource.MongoDbURL {
 func (x *DataSource_URL) GetRedis() *pbdatasource.RedisURL {
 	if x != nil {
 		return x.Redis
+	}
+	return nil
+}
+
+func (x *DataSource_URL) GetOceanBase() *pbdatasource.OceanBaseURL {
+	if x != nil {
+		return x.OceanBase
 	}
 	return nil
 }
@@ -1009,6 +1020,7 @@ var file_proto_types_model_datasource_proto_goTypes = []interface{}{
 	(*pbdatasource.ElasticSearchURL)(nil), // 22: datasource.ElasticSearchURL
 	(*pbdatasource.MongoDbURL)(nil),       // 23: datasource.MongoDbURL
 	(*pbdatasource.RedisURL)(nil),         // 24: datasource.RedisURL
+	(*pbdatasource.OceanBaseURL)(nil),     // 25: datasource.OceanBaseURL
 }
 var file_proto_types_model_datasource_proto_depIdxs = []int32{
 	1,  // 0: model.DataSource.type:type_name -> model.DataSource.Type
@@ -1035,11 +1047,12 @@ var file_proto_types_model_datasource_proto_depIdxs = []int32{
 	22, // 21: model.DataSource.URL.elastic_search:type_name -> datasource.ElasticSearchURL
 	23, // 22: model.DataSource.URL.mongo_db:type_name -> datasource.MongoDbURL
 	24, // 23: model.DataSource.URL.redis:type_name -> datasource.RedisURL
-	24, // [24:24] is the sub-list for method output_type
-	24, // [24:24] is the sub-list for method input_type
-	24, // [24:24] is the sub-list for extension type_name
-	24, // [24:24] is the sub-list for extension extendee
-	0,  // [0:24] is the sub-list for field type_name
+	25, // 24: model.DataSource.URL.oceanbase:type_name -> datasource.OceanBase
+	25, // [25:25] is the sub-list for method output_type
+	25, // [25:25] is the sub-list for method input_type
+	25, // [25:25] is the sub-list for extension type_name
+	25, // [25:25] is the sub-list for extension extendee
+	0,  // [0:25] is the sub-list for field type_name
 }
 
 func init() { file_proto_types_model_datasource_proto_init() }

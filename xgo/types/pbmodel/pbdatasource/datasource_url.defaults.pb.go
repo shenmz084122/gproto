@@ -145,3 +145,11 @@ func (this *RedisURL) SetDefaults() {
 	}
 	return
 }
+
+// Set default value for message datasource.OceanBaseURL
+func (this *OceanBaseURL) SetDefaults() {
+	if this == nil {
+		return
+	}
+	return
+}
