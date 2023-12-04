@@ -117,6 +117,9 @@ message ProjectModule {
     DataService = 118 ;
     ApiGateway = 119;
     Observable = 120;
+    SupplementLineage = 220;
+    SupplementProperty = 221;
+    SupplementOverview = 222;
   }
 
   // The module id.
