@@ -79,6 +79,9 @@ func (this *StreamJobArgs) SetDefaults() {
 	if this.Parallelism == 0 {
 		this.Parallelism = 1
 	}
+	if this.Model == 0 {
+		this.Model = 1
+	}
 	return
 }
 

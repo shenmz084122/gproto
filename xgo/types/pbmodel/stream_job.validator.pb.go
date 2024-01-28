@@ -529,6 +529,16 @@ func (this *StreamJobArgs) _xxx_xxx_Validator_Validate_py_executable() error {
 	return nil
 }
 
+func (this *StreamJobArgs) _xxx_xxx_Validator_Validate_model() error {
+	if !(this.Model >= 0) {
+		return protovalidator.FieldError1("StreamJobArgs", "the value of field 'model' must be greater than or equal to '0'", protovalidator.Int32ToString(this.Model))
+	}
+	if !(this.Model <= 100) {
+		return protovalidator.FieldError1("StreamJobArgs", "the value of field 'model' must be less than or equal to '100'", protovalidator.Int32ToString(this.Model))
+	}
+	return nil
+}
+
 // Set default value for message model.StreamJobArgs
 func (this *StreamJobArgs) Validate() error {
 	if this == nil {
@@ -559,6 +569,9 @@ func (this *StreamJobArgs) Validate() error {
 		return err
 	}
 	if err := this._xxx_xxx_Validator_Validate_py_executable(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_model(); err != nil {
 		return err
 	}
 	return nil

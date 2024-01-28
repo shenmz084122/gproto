@@ -223,6 +223,12 @@ message StreamJobArgs {
   // Specify the path of the python interpreter used to execute the python UDF worker.
   // @inject_tag: json:"py_executable"
   string py_executable = 10 [ (validator.field).tags.string = { byte_len_lte: 255 }];
+
+
+  int32 model = 11 [
+    (defaults.field).basic = "1",
+    (validator.field).tags.int = { gte: 0, lte: 100 }
+  ];
 }
 
 // StreamJobSchedule represents a job schedule info.
