@@ -115,6 +115,13 @@ func (this *DataSource) _xxx_xxx_Validator_Validate_last_connection() error {
 	return nil
 }
 
+func (this *DataSource) _xxx_xxx_Validator_Validate_schema_status() error {
+	if !(this.SchemaStatus > 0) {
+		return protovalidator.FieldError1("DataSource", "the value of field 'schema_status' must be greater than '0'", protovalidator.Int64ToString(this.SchemaStatus))
+	}
+	return nil
+}
+
 // Set default value for message model.DataSource
 func (this *DataSource) Validate() error {
 	if this == nil {
@@ -151,6 +158,9 @@ func (this *DataSource) Validate() error {
 		return err
 	}
 	if err := this._xxx_xxx_Validator_Validate_last_connection(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_schema_status(); err != nil {
 		return err
 	}
 	return nil
