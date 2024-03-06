@@ -209,6 +209,8 @@ message DataSource {
   // @inject_tag: json:"updated" gorm:"column:updated;"
   int64 updated = 10  [ (validator.field).tags.int = { gt: 0 } ];
 
+  int64 schema_status = 11  [ (validator.field).tags.int = { gt: 0 } ];
+
   // The last connection record. The value is nil if never tested for usability.
   // Notice: No in db.
   // @inject_tag: json:"last_connection" gorm:"-"
