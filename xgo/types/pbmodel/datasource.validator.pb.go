@@ -116,8 +116,8 @@ func (this *DataSource) _xxx_xxx_Validator_Validate_last_connection() error {
 }
 
 func (this *DataSource) _xxx_xxx_Validator_Validate_schema_status() error {
-	if !(this.SchemaStatus > 0) {
-		return protovalidator.FieldError1("DataSource", "the value of field 'schema_status' must be greater than '0'", protovalidator.Int64ToString(this.SchemaStatus))
+	if !(this.SchemaStatus > -1) {
+		return protovalidator.FieldError1("DataSource", "the value of field 'schema_status' must be greater than '-1'", protovalidator.Int64ToString(this.SchemaStatus))
 	}
 	return nil
 }

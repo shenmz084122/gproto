@@ -216,7 +216,7 @@ message DataSource {
   // @inject_tag: json:"last_connection" gorm:"-"
   DataSourceConnection last_connection = 11;
 
-  int64 schema_status = 12  [ (validator.field).tags.int = { gt: 0 } ];
+  int64 schema_status = 12  [ (validator.field).tags.int = { gt: -1 } ];
 }
 
 // Data Source Connection state log.
