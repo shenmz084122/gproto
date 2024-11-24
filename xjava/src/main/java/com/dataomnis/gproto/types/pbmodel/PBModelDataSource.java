@@ -254,6 +254,12 @@ public final class PBModelDataSource {
      * <code>.model.DataSourceConnection last_connection = 11;</code>
      */
     com.dataomnis.gproto.types.pbmodel.PBModelDataSource.DataSourceConnectionOrBuilder getLastConnectionOrBuilder();
+
+    /**
+     * <code>int64 schema_status = 12 [(.validator.field) = { ... }</code>
+     * @return The schemaStatus.
+     */
+    long getSchemaStatus();
   }
   /**
    * <pre>
@@ -387,6 +393,11 @@ public final class PBModelDataSource {
                 lastConnection_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 96: {
+
+              schemaStatus_ = input.readInt64();
               break;
             }
             default: {
@@ -620,6 +631,10 @@ public final class PBModelDataSource {
        * <code>Redis = 16;</code>
        */
       Redis(16),
+      /**
+       * <code>OceanBase = 17;</code>
+       */
+      OceanBase(17),
       UNRECOGNIZED(-1),
       ;
 
@@ -691,6 +706,10 @@ public final class PBModelDataSource {
        * <code>Redis = 16;</code>
        */
       public static final int Redis_VALUE = 16;
+      /**
+       * <code>OceanBase = 17;</code>
+       */
+      public static final int OceanBase_VALUE = 17;
 
 
       public final int getNumber() {
@@ -734,6 +753,7 @@ public final class PBModelDataSource {
           case 14: return ElasticSearch;
           case 15: return MongoDb;
           case 16: return Redis;
+          case 17: return OceanBase;
           default: return null;
         }
       }
@@ -800,7 +820,7 @@ public final class PBModelDataSource {
        * &#64;inject_tag: json:"-"
        * </pre>
        *
-       * <code>.model.DataSource.Type type = 17 [(.validator.field) = { ... }</code>
+       * <code>.model.DataSource.Type type = 18 [(.validator.field) = { ... }</code>
        * @return The enum numeric value on the wire for type.
        */
       int getTypeValue();
@@ -810,7 +830,7 @@ public final class PBModelDataSource {
        * &#64;inject_tag: json:"-"
        * </pre>
        *
-       * <code>.model.DataSource.Type type = 17 [(.validator.field) = { ... }</code>
+       * <code>.model.DataSource.Type type = 18 [(.validator.field) = { ... }</code>
        * @return The type.
        */
       com.dataomnis.gproto.types.pbmodel.PBModelDataSource.DataSource.Type getType();
@@ -1294,6 +1314,36 @@ public final class PBModelDataSource {
        * <code>.datasource.RedisURL redis = 16 [(.validator.field) = { ... }</code>
        */
       com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.RedisURLOrBuilder getRedisOrBuilder();
+
+      /**
+       * <pre>
+       * OceanBase Source Connection Info.
+       * &#64;inject_tag: json:"oceanbase"
+       * </pre>
+       *
+       * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+       * @return Whether the oceanbase field is set.
+       */
+      boolean hasOceanbase();
+      /**
+       * <pre>
+       * OceanBase Source Connection Info.
+       * &#64;inject_tag: json:"oceanbase"
+       * </pre>
+       *
+       * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+       * @return The oceanbase.
+       */
+      com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL getOceanbase();
+      /**
+       * <pre>
+       * OceanBase Source Connection Info.
+       * &#64;inject_tag: json:"oceanbase"
+       * </pre>
+       *
+       * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+       */
+      com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURLOrBuilder getOceanbaseOrBuilder();
     }
     /**
      * <pre>
@@ -1553,7 +1603,20 @@ public final class PBModelDataSource {
 
                 break;
               }
-              case 136: {
+              case 138: {
+                com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL.Builder subBuilder = null;
+                if (oceanbase_ != null) {
+                  subBuilder = oceanbase_.toBuilder();
+                }
+                oceanbase_ = input.readMessage(com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(oceanbase_);
+                  oceanbase_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 144: {
                 int rawValue = input.readEnum();
 
                 type_ = rawValue;
@@ -1591,7 +1654,7 @@ public final class PBModelDataSource {
                 com.dataomnis.gproto.types.pbmodel.PBModelDataSource.DataSource.URL.class, com.dataomnis.gproto.types.pbmodel.PBModelDataSource.DataSource.URL.Builder.class);
       }
 
-      public static final int TYPE_FIELD_NUMBER = 17;
+      public static final int TYPE_FIELD_NUMBER = 18;
       private int type_;
       /**
        * <pre>
@@ -1599,7 +1662,7 @@ public final class PBModelDataSource {
        * &#64;inject_tag: json:"-"
        * </pre>
        *
-       * <code>.model.DataSource.Type type = 17 [(.validator.field) = { ... }</code>
+       * <code>.model.DataSource.Type type = 18 [(.validator.field) = { ... }</code>
        * @return The enum numeric value on the wire for type.
        */
       @java.lang.Override public int getTypeValue() {
@@ -1611,7 +1674,7 @@ public final class PBModelDataSource {
        * &#64;inject_tag: json:"-"
        * </pre>
        *
-       * <code>.model.DataSource.Type type = 17 [(.validator.field) = { ... }</code>
+       * <code>.model.DataSource.Type type = 18 [(.validator.field) = { ... }</code>
        * @return The type.
        */
       @java.lang.Override public com.dataomnis.gproto.types.pbmodel.PBModelDataSource.DataSource.Type getType() {
@@ -2276,6 +2339,47 @@ public final class PBModelDataSource {
         return getRedis();
       }
 
+      public static final int OCEANBASE_FIELD_NUMBER = 17;
+      private com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL oceanbase_;
+      /**
+       * <pre>
+       * OceanBase Source Connection Info.
+       * &#64;inject_tag: json:"oceanbase"
+       * </pre>
+       *
+       * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+       * @return Whether the oceanbase field is set.
+       */
+      @java.lang.Override
+      public boolean hasOceanbase() {
+        return oceanbase_ != null;
+      }
+      /**
+       * <pre>
+       * OceanBase Source Connection Info.
+       * &#64;inject_tag: json:"oceanbase"
+       * </pre>
+       *
+       * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+       * @return The oceanbase.
+       */
+      @java.lang.Override
+      public com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL getOceanbase() {
+        return oceanbase_ == null ? com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL.getDefaultInstance() : oceanbase_;
+      }
+      /**
+       * <pre>
+       * OceanBase Source Connection Info.
+       * &#64;inject_tag: json:"oceanbase"
+       * </pre>
+       *
+       * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+       */
+      @java.lang.Override
+      public com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURLOrBuilder getOceanbaseOrBuilder() {
+        return getOceanbase();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -2338,8 +2442,11 @@ public final class PBModelDataSource {
         if (redis_ != null) {
           output.writeMessage(16, getRedis());
         }
+        if (oceanbase_ != null) {
+          output.writeMessage(17, getOceanbase());
+        }
         if (type_ != com.dataomnis.gproto.types.pbmodel.PBModelDataSource.DataSource.Type.TypeUnset.getNumber()) {
-          output.writeEnum(17, type_);
+          output.writeEnum(18, type_);
         }
         unknownFields.writeTo(output);
       }
@@ -2414,9 +2521,13 @@ public final class PBModelDataSource {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(16, getRedis());
         }
+        if (oceanbase_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(17, getOceanbase());
+        }
         if (type_ != com.dataomnis.gproto.types.pbmodel.PBModelDataSource.DataSource.Type.TypeUnset.getNumber()) {
           size += com.google.protobuf.CodedOutputStream
-            .computeEnumSize(17, type_);
+            .computeEnumSize(18, type_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -2514,6 +2625,11 @@ public final class PBModelDataSource {
           if (!getRedis()
               .equals(other.getRedis())) return false;
         }
+        if (hasOceanbase() != other.hasOceanbase()) return false;
+        if (hasOceanbase()) {
+          if (!getOceanbase()
+              .equals(other.getOceanbase())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -2590,6 +2706,10 @@ public final class PBModelDataSource {
         if (hasRedis()) {
           hash = (37 * hash) + REDIS_FIELD_NUMBER;
           hash = (53 * hash) + getRedis().hashCode();
+        }
+        if (hasOceanbase()) {
+          hash = (37 * hash) + OCEANBASE_FIELD_NUMBER;
+          hash = (53 * hash) + getOceanbase().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -2826,6 +2946,12 @@ public final class PBModelDataSource {
             redis_ = null;
             redisBuilder_ = null;
           }
+          if (oceanbaseBuilder_ == null) {
+            oceanbase_ = null;
+          } else {
+            oceanbase_ = null;
+            oceanbaseBuilder_ = null;
+          }
           return this;
         }
 
@@ -2933,6 +3059,11 @@ public final class PBModelDataSource {
           } else {
             result.redis_ = redisBuilder_.build();
           }
+          if (oceanbaseBuilder_ == null) {
+            result.oceanbase_ = oceanbase_;
+          } else {
+            result.oceanbase_ = oceanbaseBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -3032,6 +3163,9 @@ public final class PBModelDataSource {
           if (other.hasRedis()) {
             mergeRedis(other.getRedis());
           }
+          if (other.hasOceanbase()) {
+            mergeOceanbase(other.getOceanbase());
+          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -3068,7 +3202,7 @@ public final class PBModelDataSource {
          * &#64;inject_tag: json:"-"
          * </pre>
          *
-         * <code>.model.DataSource.Type type = 17 [(.validator.field) = { ... }</code>
+         * <code>.model.DataSource.Type type = 18 [(.validator.field) = { ... }</code>
          * @return The enum numeric value on the wire for type.
          */
         @java.lang.Override public int getTypeValue() {
@@ -3080,7 +3214,7 @@ public final class PBModelDataSource {
          * &#64;inject_tag: json:"-"
          * </pre>
          *
-         * <code>.model.DataSource.Type type = 17 [(.validator.field) = { ... }</code>
+         * <code>.model.DataSource.Type type = 18 [(.validator.field) = { ... }</code>
          * @param value The enum numeric value on the wire for type to set.
          * @return This builder for chaining.
          */
@@ -3096,7 +3230,7 @@ public final class PBModelDataSource {
          * &#64;inject_tag: json:"-"
          * </pre>
          *
-         * <code>.model.DataSource.Type type = 17 [(.validator.field) = { ... }</code>
+         * <code>.model.DataSource.Type type = 18 [(.validator.field) = { ... }</code>
          * @return The type.
          */
         @java.lang.Override
@@ -3111,7 +3245,7 @@ public final class PBModelDataSource {
          * &#64;inject_tag: json:"-"
          * </pre>
          *
-         * <code>.model.DataSource.Type type = 17 [(.validator.field) = { ... }</code>
+         * <code>.model.DataSource.Type type = 18 [(.validator.field) = { ... }</code>
          * @param value The type to set.
          * @return This builder for chaining.
          */
@@ -3130,7 +3264,7 @@ public final class PBModelDataSource {
          * &#64;inject_tag: json:"-"
          * </pre>
          *
-         * <code>.model.DataSource.Type type = 17 [(.validator.field) = { ... }</code>
+         * <code>.model.DataSource.Type type = 18 [(.validator.field) = { ... }</code>
          * @return This builder for chaining.
          */
         public Builder clearType() {
@@ -5763,6 +5897,170 @@ public final class PBModelDataSource {
           }
           return redisBuilder_;
         }
+
+        private com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL oceanbase_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL, com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL.Builder, com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURLOrBuilder> oceanbaseBuilder_;
+        /**
+         * <pre>
+         * OceanBase Source Connection Info.
+         * &#64;inject_tag: json:"oceanbase"
+         * </pre>
+         *
+         * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+         * @return Whether the oceanbase field is set.
+         */
+        public boolean hasOceanbase() {
+          return oceanbaseBuilder_ != null || oceanbase_ != null;
+        }
+        /**
+         * <pre>
+         * OceanBase Source Connection Info.
+         * &#64;inject_tag: json:"oceanbase"
+         * </pre>
+         *
+         * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+         * @return The oceanbase.
+         */
+        public com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL getOceanbase() {
+          if (oceanbaseBuilder_ == null) {
+            return oceanbase_ == null ? com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL.getDefaultInstance() : oceanbase_;
+          } else {
+            return oceanbaseBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * OceanBase Source Connection Info.
+         * &#64;inject_tag: json:"oceanbase"
+         * </pre>
+         *
+         * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+         */
+        public Builder setOceanbase(com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL value) {
+          if (oceanbaseBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            oceanbase_ = value;
+            onChanged();
+          } else {
+            oceanbaseBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * OceanBase Source Connection Info.
+         * &#64;inject_tag: json:"oceanbase"
+         * </pre>
+         *
+         * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+         */
+        public Builder setOceanbase(
+            com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL.Builder builderForValue) {
+          if (oceanbaseBuilder_ == null) {
+            oceanbase_ = builderForValue.build();
+            onChanged();
+          } else {
+            oceanbaseBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * OceanBase Source Connection Info.
+         * &#64;inject_tag: json:"oceanbase"
+         * </pre>
+         *
+         * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+         */
+        public Builder mergeOceanbase(com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL value) {
+          if (oceanbaseBuilder_ == null) {
+            if (oceanbase_ != null) {
+              oceanbase_ =
+                com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL.newBuilder(oceanbase_).mergeFrom(value).buildPartial();
+            } else {
+              oceanbase_ = value;
+            }
+            onChanged();
+          } else {
+            oceanbaseBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * OceanBase Source Connection Info.
+         * &#64;inject_tag: json:"oceanbase"
+         * </pre>
+         *
+         * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+         */
+        public Builder clearOceanbase() {
+          if (oceanbaseBuilder_ == null) {
+            oceanbase_ = null;
+            onChanged();
+          } else {
+            oceanbase_ = null;
+            oceanbaseBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * OceanBase Source Connection Info.
+         * &#64;inject_tag: json:"oceanbase"
+         * </pre>
+         *
+         * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+         */
+        public com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL.Builder getOceanbaseBuilder() {
+          
+          onChanged();
+          return getOceanbaseFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * OceanBase Source Connection Info.
+         * &#64;inject_tag: json:"oceanbase"
+         * </pre>
+         *
+         * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+         */
+        public com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURLOrBuilder getOceanbaseOrBuilder() {
+          if (oceanbaseBuilder_ != null) {
+            return oceanbaseBuilder_.getMessageOrBuilder();
+          } else {
+            return oceanbase_ == null ?
+                com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL.getDefaultInstance() : oceanbase_;
+          }
+        }
+        /**
+         * <pre>
+         * OceanBase Source Connection Info.
+         * &#64;inject_tag: json:"oceanbase"
+         * </pre>
+         *
+         * <code>.datasource.OceanBaseURL oceanbase = 17 [(.validator.field) = { ... }</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL, com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL.Builder, com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURLOrBuilder> 
+            getOceanbaseFieldBuilder() {
+          if (oceanbaseBuilder_ == null) {
+            oceanbaseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL, com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURL.Builder, com.dataomnis.gproto.types.pbmodel.pbdatasource.PBDataSourceURL.OceanBaseURLOrBuilder>(
+                    getOceanbase(),
+                    getParentForChildren(),
+                    isClean());
+            oceanbase_ = null;
+          }
+          return oceanbaseBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6231,6 +6529,17 @@ public final class PBModelDataSource {
       return getLastConnection();
     }
 
+    public static final int SCHEMA_STATUS_FIELD_NUMBER = 12;
+    private long schemaStatus_;
+    /**
+     * <code>int64 schema_status = 12 [(.validator.field) = { ... }</code>
+     * @return The schemaStatus.
+     */
+    @java.lang.Override
+    public long getSchemaStatus() {
+      return schemaStatus_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6277,6 +6586,9 @@ public final class PBModelDataSource {
       }
       if (lastConnection_ != null) {
         output.writeMessage(11, getLastConnection());
+      }
+      if (schemaStatus_ != 0L) {
+        output.writeInt64(12, schemaStatus_);
       }
       unknownFields.writeTo(output);
     }
@@ -6326,6 +6638,10 @@ public final class PBModelDataSource {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getLastConnection());
       }
+      if (schemaStatus_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(12, schemaStatus_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6367,6 +6683,8 @@ public final class PBModelDataSource {
         if (!getLastConnection()
             .equals(other.getLastConnection())) return false;
       }
+      if (getSchemaStatus()
+          != other.getSchemaStatus()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6406,6 +6724,9 @@ public final class PBModelDataSource {
         hash = (37 * hash) + LAST_CONNECTION_FIELD_NUMBER;
         hash = (53 * hash) + getLastConnection().hashCode();
       }
+      hash = (37 * hash) + SCHEMA_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSchemaStatus());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6573,6 +6894,8 @@ public final class PBModelDataSource {
           lastConnection_ = null;
           lastConnectionBuilder_ = null;
         }
+        schemaStatus_ = 0L;
+
         return this;
       }
 
@@ -6618,6 +6941,7 @@ public final class PBModelDataSource {
         } else {
           result.lastConnection_ = lastConnectionBuilder_.build();
         }
+        result.schemaStatus_ = schemaStatus_;
         onBuilt();
         return result;
       }
@@ -6703,6 +7027,9 @@ public final class PBModelDataSource {
         }
         if (other.hasLastConnection()) {
           mergeLastConnection(other.getLastConnection());
+        }
+        if (other.getSchemaStatus() != 0L) {
+          setSchemaStatus(other.getSchemaStatus());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7823,6 +8150,37 @@ public final class PBModelDataSource {
           lastConnection_ = null;
         }
         return lastConnectionBuilder_;
+      }
+
+      private long schemaStatus_ ;
+      /**
+       * <code>int64 schema_status = 12 [(.validator.field) = { ... }</code>
+       * @return The schemaStatus.
+       */
+      @java.lang.Override
+      public long getSchemaStatus() {
+        return schemaStatus_;
+      }
+      /**
+       * <code>int64 schema_status = 12 [(.validator.field) = { ... }</code>
+       * @param value The schemaStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaStatus(long value) {
+        
+        schemaStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 schema_status = 12 [(.validator.field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchemaStatus() {
+        
+        schemaStatus_ = 0L;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10744,7 +11102,7 @@ public final class PBModelDataSource {
       "/validator.proto\032/github.com/yu31/protoc" +
       "-plugin/proto/gosql.proto\032\037proto/types/m" +
       "odel/network.proto\0321proto/types/model/da" +
-      "tasource/datasource_url.proto\"\241\017\n\nDataSo" +
+      "tasource/datasource_url.proto\"\252\020\n\nDataSo" +
       "urce\022%\n\010space_id\030\001 \001(\tB\023\342\337\037\017\022\r\302\001\n\360\001\024\312\002\004w" +
       "ks-\022\037\n\002id\030\002 \001(\tB\023\342\337\037\017\022\r\302\001\n\360\001\024\312\002\004som-\022\035\n\004" +
       "name\030\003 \001(\tB\017\342\337\037\013\022\t\302\001\006\220\002\002\230\002@\022\033\n\004desc\030\004 \001(" +
@@ -10756,59 +11114,63 @@ public final class PBModelDataSource {
       "\337\037\013\022\t\302\001\006\200\002\000\210\002A\022\034\n\007created\030\t \001(\003B\013\342\337\037\007\022\005\262" +
       "\001\0020\000\022\034\n\007updated\030\n \001(\003B\013\342\337\037\007\022\005\262\001\0020\000\0224\n\017la" +
       "st_connection\030\013 \001(\0132\033.model.DataSourceCo" +
-      "nnection\032\271\t\n\003URL\0223\n\004type\030\021 \001(\0162\026.model.D" +
-      "ataSource.TypeB\r\342\337\037\t\022\007\332\001\0040\000X\001\022C\n\005mysql\030\001" +
-      " \001(\0132\024.datasource.MySQLURLB\036\342\337\037\017\n\r\n\004type" +
-      "\022\005\332\001\002\030\001\342\337\037\007\022\005\342\001\002\020\001\022M\n\npostgresql\030\002 \001(\0132\031" +
-      ".datasource.PostgreSQLURLB\036\342\337\037\017\n\r\n\004type\022" +
-      "\005\332\001\002\030\002\342\337\037\007\022\005\342\001\002\020\001\022C\n\005kafka\030\003 \001(\0132\024.datas" +
-      "ource.KafkaURLB\036\342\337\037\017\n\r\n\004type\022\005\332\001\002\030\003\342\337\037\007\022" +
-      "\005\342\001\002\020\001\022=\n\002s3\030\004 \001(\0132\021.datasource.S3URLB\036\342" +
-      "\337\037\017\n\r\n\004type\022\005\332\001\002\030\004\342\337\037\007\022\005\342\001\002\020\001\022M\n\nclickho" +
-      "use\030\005 \001(\0132\031.datasource.ClickHouseURLB\036\342\337" +
-      "\037\017\n\r\n\004type\022\005\332\001\002\030\005\342\337\037\007\022\005\342\001\002\020\001\022C\n\005hbase\030\006 " +
-      "\001(\0132\024.datasource.HBaseURLB\036\342\337\037\017\n\r\n\004type\022" +
-      "\005\332\001\002\030\006\342\337\037\007\022\005\342\001\002\020\001\022?\n\003ftp\030\007 \001(\0132\022.datasou" +
-      "rce.FtpURLB\036\342\337\037\017\n\r\n\004type\022\005\332\001\002\030\007\342\337\037\007\022\005\342\001\002" +
-      "\020\001\022A\n\004hdfs\030\010 \001(\0132\023.datasource.HDFSURLB\036\342" +
-      "\337\037\017\n\r\n\004type\022\005\332\001\002\030\010\342\337\037\007\022\005\342\001\002\020\001\022K\n\tsqlserv" +
-      "er\030\t \001(\0132\030.datasource.SqlServerURLB\036\342\337\037\017" +
-      "\n\r\n\004type\022\005\332\001\002\030\t\342\337\037\007\022\005\342\001\002\020\001\022E\n\006oracle\030\n \001" +
-      "(\0132\025.datasource.OracleURLB\036\342\337\037\017\n\r\n\004type\022" +
-      "\005\332\001\002\030\n\342\337\037\007\022\005\342\001\002\020\001\022?\n\003db2\030\013 \001(\0132\022.datasou" +
-      "rce.DB2URLB\036\342\337\037\017\n\r\n\004type\022\005\332\001\002\030\013\342\337\037\007\022\005\342\001\002" +
-      "\020\001\022H\n\010sap_hana\030\014 \001(\0132\026.datasource.SapHan" +
-      "aURLB\036\342\337\037\017\n\r\n\004type\022\005\332\001\002\030\014\342\337\037\007\022\005\342\001\002\020\001\022A\n\004" +
-      "hive\030\r \001(\0132\023.datasource.HiveURLB\036\342\337\037\017\n\r\n" +
-      "\004type\022\005\332\001\002\030\r\342\337\037\007\022\005\342\001\002\020\001\022T\n\016elastic_searc" +
-      "h\030\016 \001(\0132\034.datasource.ElasticSearchURLB\036\342" +
-      "\337\037\017\n\r\n\004type\022\005\332\001\002\030\016\342\337\037\007\022\005\342\001\002\020\001\022H\n\010mongo_d" +
-      "b\030\017 \001(\0132\026.datasource.MongoDbURLB\036\342\337\037\017\n\r\n" +
-      "\004type\022\005\332\001\002\030\017\342\337\037\007\022\005\342\001\002\020\001\022C\n\005redis\030\020 \001(\0132\024" +
-      ".datasource.RedisURLB\036\342\337\037\017\n\r\n\004type\022\005\332\001\002\030" +
-      "\020\342\337\037\007\022\005\342\001\002\020\001:\006\312\262\004\002\n\000\"A\n\006Status\022\017\n\013Status" +
-      "Unset\020\000\022\013\n\007Deleted\020\001\022\013\n\007Enabled\020\002\022\014\n\010Dis" +
-      "abled\020\003\"\327\001\n\004Type\022\r\n\tTypeUnset\020\000\022\t\n\005MySQL" +
-      "\020\001\022\016\n\nPostgreSQL\020\002\022\t\n\005Kafka\020\003\022\006\n\002S3\020\004\022\016\n" +
-      "\nClickHouse\020\005\022\t\n\005HBase\020\006\022\007\n\003Ftp\020\007\022\010\n\004HDF" +
-      "S\020\010\022\r\n\tSqlServer\020\t\022\n\n\006Oracle\020\n\022\007\n\003DB2\020\013\022" +
-      "\013\n\007SapHana\020\014\022\010\n\004Hive\020\r\022\021\n\rElasticSearch\020" +
-      "\016\022\013\n\007MongoDb\020\017\022\t\n\005Redis\020\020\"\314\003\n\024DataSource" +
-      "Connection\022%\n\010space_id\030\001 \001(\tB\023\342\337\037\017\022\r\302\001\n\360" +
-      "\001\024\312\002\004wks-\022&\n\tsource_id\030\002 \001(\tB\023\342\337\037\017\022\r\302\001\n\360" +
-      "\001\024\312\002\004som-\022\022\n\nnetwork_id\030\003 \001(\t\022A\n\006status\030" +
-      "\004 \001(\0162\".model.DataSourceConnection.Statu" +
-      "sB\r\342\337\037\t\022\007\332\001\0040\001X\001\022A\n\006result\030\005 \001(\0162\".model" +
-      ".DataSourceConnection.ResultB\r\342\337\037\t\022\007\332\001\0040" +
-      "\000X\001\022\017\n\007message\030\006 \001(\t\022\034\n\007created\030\007 \001(\003B\013\342" +
-      "\337\037\007\022\005\262\001\0020\000\022\016\n\006elapse\030\010 \001(\003\022$\n\014network_in" +
-      "fo\030\t \001(\0132\016.model.Network\"3\n\006Status\022\017\n\013St" +
-      "atusUnset\020\000\022\013\n\007Deleted\020\001\022\013\n\007Enabled\020\002\"1\n" +
-      "\006Result\022\016\n\nStateUnset\020\000\022\013\n\007Success\020\001\022\n\n\006" +
-      "Failed\020\002\"\036\n\016DataSourceKind\022\014\n\004Name\030\001 \001(\t" +
-      "Bl\n\"com.dataomnis.gproto.types.pbmodelB\021" +
-      "PBModelDataSourceP\000Z1github.com/DataWork" +
-      "bench/gproto/xgo/types/pbmodelb\006proto3"
+      "nnection\022+\n\rschema_status\030\014 \001(\003B\024\342\337\037\020\022\016\262" +
+      "\001\0130\377\377\377\377\377\377\377\377\377\001\032\206\n\n\003URL\0223\n\004type\030\022 \001(\0162\026.mo" +
+      "del.DataSource.TypeB\r\342\337\037\t\022\007\332\001\0040\000X\001\022C\n\005my" +
+      "sql\030\001 \001(\0132\024.datasource.MySQLURLB\036\342\337\037\017\n\r\n" +
+      "\004type\022\005\332\001\002\030\001\342\337\037\007\022\005\342\001\002\020\001\022M\n\npostgresql\030\002 " +
+      "\001(\0132\031.datasource.PostgreSQLURLB\036\342\337\037\017\n\r\n\004" +
+      "type\022\005\332\001\002\030\002\342\337\037\007\022\005\342\001\002\020\001\022C\n\005kafka\030\003 \001(\0132\024." +
+      "datasource.KafkaURLB\036\342\337\037\017\n\r\n\004type\022\005\332\001\002\030\003" +
+      "\342\337\037\007\022\005\342\001\002\020\001\022=\n\002s3\030\004 \001(\0132\021.datasource.S3U" +
+      "RLB\036\342\337\037\017\n\r\n\004type\022\005\332\001\002\030\004\342\337\037\007\022\005\342\001\002\020\001\022M\n\ncl" +
+      "ickhouse\030\005 \001(\0132\031.datasource.ClickHouseUR" +
+      "LB\036\342\337\037\017\n\r\n\004type\022\005\332\001\002\030\005\342\337\037\007\022\005\342\001\002\020\001\022C\n\005hba" +
+      "se\030\006 \001(\0132\024.datasource.HBaseURLB\036\342\337\037\017\n\r\n\004" +
+      "type\022\005\332\001\002\030\006\342\337\037\007\022\005\342\001\002\020\001\022?\n\003ftp\030\007 \001(\0132\022.da" +
+      "tasource.FtpURLB\036\342\337\037\017\n\r\n\004type\022\005\332\001\002\030\007\342\337\037\007" +
+      "\022\005\342\001\002\020\001\022A\n\004hdfs\030\010 \001(\0132\023.datasource.HDFSU" +
+      "RLB\036\342\337\037\017\n\r\n\004type\022\005\332\001\002\030\010\342\337\037\007\022\005\342\001\002\020\001\022K\n\tsq" +
+      "lserver\030\t \001(\0132\030.datasource.SqlServerURLB" +
+      "\036\342\337\037\017\n\r\n\004type\022\005\332\001\002\030\t\342\337\037\007\022\005\342\001\002\020\001\022E\n\006oracl" +
+      "e\030\n \001(\0132\025.datasource.OracleURLB\036\342\337\037\017\n\r\n\004" +
+      "type\022\005\332\001\002\030\n\342\337\037\007\022\005\342\001\002\020\001\022?\n\003db2\030\013 \001(\0132\022.da" +
+      "tasource.DB2URLB\036\342\337\037\017\n\r\n\004type\022\005\332\001\002\030\013\342\337\037\007" +
+      "\022\005\342\001\002\020\001\022H\n\010sap_hana\030\014 \001(\0132\026.datasource.S" +
+      "apHanaURLB\036\342\337\037\017\n\r\n\004type\022\005\332\001\002\030\014\342\337\037\007\022\005\342\001\002\020" +
+      "\001\022A\n\004hive\030\r \001(\0132\023.datasource.HiveURLB\036\342\337" +
+      "\037\017\n\r\n\004type\022\005\332\001\002\030\r\342\337\037\007\022\005\342\001\002\020\001\022T\n\016elastic_" +
+      "search\030\016 \001(\0132\034.datasource.ElasticSearchU" +
+      "RLB\036\342\337\037\017\n\r\n\004type\022\005\332\001\002\030\016\342\337\037\007\022\005\342\001\002\020\001\022H\n\010mo" +
+      "ngo_db\030\017 \001(\0132\026.datasource.MongoDbURLB\036\342\337" +
+      "\037\017\n\r\n\004type\022\005\332\001\002\030\017\342\337\037\007\022\005\342\001\002\020\001\022C\n\005redis\030\020 " +
+      "\001(\0132\024.datasource.RedisURLB\036\342\337\037\017\n\r\n\004type\022" +
+      "\005\332\001\002\030\020\342\337\037\007\022\005\342\001\002\020\001\022K\n\toceanbase\030\021 \001(\0132\030.d" +
+      "atasource.OceanBaseURLB\036\342\337\037\017\n\r\n\004type\022\005\332\001" +
+      "\002\030\021\342\337\037\007\022\005\342\001\002\020\001:\006\312\262\004\002\n\000\"A\n\006Status\022\017\n\013Stat" +
+      "usUnset\020\000\022\013\n\007Deleted\020\001\022\013\n\007Enabled\020\002\022\014\n\010D" +
+      "isabled\020\003\"\346\001\n\004Type\022\r\n\tTypeUnset\020\000\022\t\n\005MyS" +
+      "QL\020\001\022\016\n\nPostgreSQL\020\002\022\t\n\005Kafka\020\003\022\006\n\002S3\020\004\022" +
+      "\016\n\nClickHouse\020\005\022\t\n\005HBase\020\006\022\007\n\003Ftp\020\007\022\010\n\004H" +
+      "DFS\020\010\022\r\n\tSqlServer\020\t\022\n\n\006Oracle\020\n\022\007\n\003DB2\020" +
+      "\013\022\013\n\007SapHana\020\014\022\010\n\004Hive\020\r\022\021\n\rElasticSearc" +
+      "h\020\016\022\013\n\007MongoDb\020\017\022\t\n\005Redis\020\020\022\r\n\tOceanBase" +
+      "\020\021\"\314\003\n\024DataSourceConnection\022%\n\010space_id\030" +
+      "\001 \001(\tB\023\342\337\037\017\022\r\302\001\n\360\001\024\312\002\004wks-\022&\n\tsource_id\030" +
+      "\002 \001(\tB\023\342\337\037\017\022\r\302\001\n\360\001\024\312\002\004som-\022\022\n\nnetwork_id" +
+      "\030\003 \001(\t\022A\n\006status\030\004 \001(\0162\".model.DataSourc" +
+      "eConnection.StatusB\r\342\337\037\t\022\007\332\001\0040\001X\001\022A\n\006res" +
+      "ult\030\005 \001(\0162\".model.DataSourceConnection.R" +
+      "esultB\r\342\337\037\t\022\007\332\001\0040\000X\001\022\017\n\007message\030\006 \001(\t\022\034\n" +
+      "\007created\030\007 \001(\003B\013\342\337\037\007\022\005\262\001\0020\000\022\016\n\006elapse\030\010 " +
+      "\001(\003\022$\n\014network_info\030\t \001(\0132\016.model.Networ" +
+      "k\"3\n\006Status\022\017\n\013StatusUnset\020\000\022\013\n\007Deleted\020" +
+      "\001\022\013\n\007Enabled\020\002\"1\n\006Result\022\016\n\nStateUnset\020\000" +
+      "\022\013\n\007Success\020\001\022\n\n\006Failed\020\002\"\036\n\016DataSourceK" +
+      "ind\022\014\n\004Name\030\001 \001(\tBl\n\"com.dataomnis.gprot" +
+      "o.types.pbmodelB\021PBModelDataSourceP\000Z1gi" +
+      "thub.com/DataWorkbench/gproto/xgo/types/" +
+      "pbmodelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10823,13 +11185,13 @@ public final class PBModelDataSource {
     internal_static_model_DataSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_model_DataSource_descriptor,
-        new java.lang.String[] { "SpaceId", "Id", "Name", "Desc", "Type", "Url", "Status", "CreatedBy", "Created", "Updated", "LastConnection", });
+        new java.lang.String[] { "SpaceId", "Id", "Name", "Desc", "Type", "Url", "Status", "CreatedBy", "Created", "Updated", "LastConnection", "SchemaStatus", });
     internal_static_model_DataSource_URL_descriptor =
       internal_static_model_DataSource_descriptor.getNestedTypes().get(0);
     internal_static_model_DataSource_URL_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_model_DataSource_URL_descriptor,
-        new java.lang.String[] { "Type", "Mysql", "Postgresql", "Kafka", "S3", "Clickhouse", "Hbase", "Ftp", "Hdfs", "Sqlserver", "Oracle", "Db2", "SapHana", "Hive", "ElasticSearch", "MongoDb", "Redis", });
+        new java.lang.String[] { "Type", "Mysql", "Postgresql", "Kafka", "S3", "Clickhouse", "Hbase", "Ftp", "Hdfs", "Sqlserver", "Oracle", "Db2", "SapHana", "Hive", "ElasticSearch", "MongoDb", "Redis", "Oceanbase", });
     internal_static_model_DataSourceConnection_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_model_DataSourceConnection_fieldAccessorTable = new

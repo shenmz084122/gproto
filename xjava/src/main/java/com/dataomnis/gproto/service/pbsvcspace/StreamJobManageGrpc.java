@@ -878,6 +878,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for stream job dev.
+     *
      * ListStreamJobs to get a list of stream job of the workspace.
      * </pre>
      */
@@ -1012,6 +1013,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for stream job release.
+     *
      * ListReleaseStreamJobs for gets a list of all published job in the workspace.
      * </pre>
      */
@@ -1085,6 +1087,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for stream job versions.
+     *
      * ListStreamJobVersions for gets a list of all versions of the specified job.
      * </pre>
      */
@@ -1136,6 +1139,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for helper.
+     *
      * </pre>
      */
     public void describeFlinkUIByInstanceId(com.dataomnis.gproto.types.pbrequest.PBRequestStreamJobManage.DescribeFlinkUIByInstanceId request,
@@ -1351,6 +1355,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for stream job dev.
+     *
      * ListStreamJobs to get a list of stream job of the workspace.
      * </pre>
      */
@@ -1498,6 +1503,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for stream job release.
+     *
      * ListReleaseStreamJobs for gets a list of all published job in the workspace.
      * </pre>
      */
@@ -1578,6 +1584,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for stream job versions.
+     *
      * ListStreamJobVersions for gets a list of all versions of the specified job.
      * </pre>
      */
@@ -1634,6 +1641,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for helper.
+     *
      * </pre>
      */
     public void describeFlinkUIByInstanceId(com.dataomnis.gproto.types.pbrequest.PBRequestStreamJobManage.DescribeFlinkUIByInstanceId request,
@@ -1663,6 +1671,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for stream job dev.
+     *
      * ListStreamJobs to get a list of stream job of the workspace.
      * </pre>
      */
@@ -1797,6 +1806,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for stream job release.
+     *
      * ListReleaseStreamJobs for gets a list of all published job in the workspace.
      * </pre>
      */
@@ -1870,6 +1880,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for stream job versions.
+     *
      * ListStreamJobVersions for gets a list of all versions of the specified job.
      * </pre>
      */
@@ -1921,6 +1932,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for helper.
+     *
      * </pre>
      */
     public com.dataomnis.gproto.types.pbresponse.PBResponseStreamJobManage.DescribeFlinkUIByInstanceId describeFlinkUIByInstanceId(com.dataomnis.gproto.types.pbrequest.PBRequestStreamJobManage.DescribeFlinkUIByInstanceId request) {
@@ -1949,6 +1961,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for stream job dev.
+     *
      * ListStreamJobs to get a list of stream job of the workspace.
      * </pre>
      */
@@ -2096,6 +2109,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for stream job release.
+     *
      * ListReleaseStreamJobs for gets a list of all published job in the workspace.
      * </pre>
      */
@@ -2176,6 +2190,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for stream job versions.
+     *
      * ListStreamJobVersions for gets a list of all versions of the specified job.
      * </pre>
      */
@@ -2232,6 +2247,7 @@ public final class StreamJobManageGrpc {
     /**
      * <pre>
      * Interface for helper.
+     *
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.dataomnis.gproto.types.pbresponse.PBResponseStreamJobManage.DescribeFlinkUIByInstanceId> describeFlinkUIByInstanceId(

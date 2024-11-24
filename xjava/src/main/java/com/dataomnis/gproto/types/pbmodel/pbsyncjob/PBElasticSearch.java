@@ -69,47 +69,47 @@ public final class PBElasticSearch {
 
     /**
      * <pre>
-     * version
-     * &#64;inject_tag: json:"version" 
-     * </pre>
-     *
-     * <code>string version = 2;</code>
-     * @return The version.
-     */
-    java.lang.String getVersion();
-    /**
-     * <pre>
-     * version
-     * &#64;inject_tag: json:"version" 
-     * </pre>
-     *
-     * <code>string version = 2;</code>
-     * @return The bytes for version.
-     */
-    com.google.protobuf.ByteString
-        getVersionBytes();
-
-    /**
-     * <pre>
      * index
-     * &#64;inject_tag: json:"index" 
+     * &#64;inject_tag: json:"index"
      * </pre>
      *
-     * <code>string index = 3;</code>
+     * <code>string index = 2;</code>
      * @return The index.
      */
     java.lang.String getIndex();
     /**
      * <pre>
      * index
-     * &#64;inject_tag: json:"index" 
+     * &#64;inject_tag: json:"index"
      * </pre>
      *
-     * <code>string index = 3;</code>
+     * <code>string index = 2;</code>
      * @return The bytes for index.
      */
     com.google.protobuf.ByteString
         getIndexBytes();
+
+    /**
+     * <pre>
+     * type
+     * &#64;inject_tag: json:"type"
+     * </pre>
+     *
+     * <code>string type = 3;</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <pre>
+     * type
+     * &#64;inject_tag: json:"type"
+     * </pre>
+     *
+     * <code>string type = 3;</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
 
     /**
      * <pre>
@@ -136,8 +136,8 @@ public final class PBElasticSearch {
     }
     private ElasticSearchSource() {
       column_ = java.util.Collections.emptyList();
-      version_ = "";
       index_ = "";
+      type_ = "";
     }
 
     @java.lang.Override
@@ -183,13 +183,13 @@ public final class PBElasticSearch {
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              version_ = s;
+              index_ = s;
               break;
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              index_ = s;
+              type_ = s;
               break;
             }
             case 32: {
@@ -297,63 +297,15 @@ public final class PBElasticSearch {
       return column_.get(index);
     }
 
-    public static final int VERSION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object version_;
-    /**
-     * <pre>
-     * version
-     * &#64;inject_tag: json:"version" 
-     * </pre>
-     *
-     * <code>string version = 2;</code>
-     * @return The version.
-     */
-    @java.lang.Override
-    public java.lang.String getVersion() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        version_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * version
-     * &#64;inject_tag: json:"version" 
-     * </pre>
-     *
-     * <code>string version = 2;</code>
-     * @return The bytes for version.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getVersionBytes() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        version_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int INDEX_FIELD_NUMBER = 3;
+    public static final int INDEX_FIELD_NUMBER = 2;
     private volatile java.lang.Object index_;
     /**
      * <pre>
      * index
-     * &#64;inject_tag: json:"index" 
+     * &#64;inject_tag: json:"index"
      * </pre>
      *
-     * <code>string index = 3;</code>
+     * <code>string index = 2;</code>
      * @return The index.
      */
     @java.lang.Override
@@ -372,10 +324,10 @@ public final class PBElasticSearch {
     /**
      * <pre>
      * index
-     * &#64;inject_tag: json:"index" 
+     * &#64;inject_tag: json:"index"
      * </pre>
      *
-     * <code>string index = 3;</code>
+     * <code>string index = 2;</code>
      * @return The bytes for index.
      */
     @java.lang.Override
@@ -387,6 +339,54 @@ public final class PBElasticSearch {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         index_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object type_;
+    /**
+     * <pre>
+     * type
+     * &#64;inject_tag: json:"type"
+     * </pre>
+     *
+     * <code>string type = 3;</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * type
+     * &#64;inject_tag: json:"type"
+     * </pre>
+     *
+     * <code>string type = 3;</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -426,11 +426,11 @@ public final class PBElasticSearch {
       for (int i = 0; i < column_.size(); i++) {
         output.writeMessage(1, column_.get(i));
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, version_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(index_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, index_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
       }
       if (batchSize_ != 0) {
         output.writeInt32(4, batchSize_);
@@ -448,11 +448,11 @@ public final class PBElasticSearch {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, column_.get(i));
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, version_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(index_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, index_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
       }
       if (batchSize_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -475,10 +475,10 @@ public final class PBElasticSearch {
 
       if (!getColumnList()
           .equals(other.getColumnList())) return false;
-      if (!getVersion()
-          .equals(other.getVersion())) return false;
       if (!getIndex()
           .equals(other.getIndex())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
       if (getBatchSize()
           != other.getBatchSize()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -496,10 +496,10 @@ public final class PBElasticSearch {
         hash = (37 * hash) + COLUMN_FIELD_NUMBER;
         hash = (53 * hash) + getColumnList().hashCode();
       }
-      hash = (37 * hash) + VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getVersion().hashCode();
       hash = (37 * hash) + INDEX_FIELD_NUMBER;
       hash = (53 * hash) + getIndex().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
       hash = (37 * hash) + BATCH_SIZE_FIELD_NUMBER;
       hash = (53 * hash) + getBatchSize();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -642,9 +642,9 @@ public final class PBElasticSearch {
         } else {
           columnBuilder_.clear();
         }
-        version_ = "";
-
         index_ = "";
+
+        type_ = "";
 
         batchSize_ = 0;
 
@@ -684,8 +684,8 @@ public final class PBElasticSearch {
         } else {
           result.column_ = columnBuilder_.build();
         }
-        result.version_ = version_;
         result.index_ = index_;
+        result.type_ = type_;
         result.batchSize_ = batchSize_;
         onBuilt();
         return result;
@@ -761,12 +761,12 @@ public final class PBElasticSearch {
             }
           }
         }
-        if (!other.getVersion().isEmpty()) {
-          version_ = other.version_;
-          onChanged();
-        }
         if (!other.getIndex().isEmpty()) {
           index_ = other.index_;
+          onChanged();
+        }
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
           onChanged();
         }
         if (other.getBatchSize() != 0) {
@@ -1132,115 +1132,14 @@ public final class PBElasticSearch {
         return columnBuilder_;
       }
 
-      private java.lang.Object version_ = "";
-      /**
-       * <pre>
-       * version
-       * &#64;inject_tag: json:"version" 
-       * </pre>
-       *
-       * <code>string version = 2;</code>
-       * @return The version.
-       */
-      public java.lang.String getVersion() {
-        java.lang.Object ref = version_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          version_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * version
-       * &#64;inject_tag: json:"version" 
-       * </pre>
-       *
-       * <code>string version = 2;</code>
-       * @return The bytes for version.
-       */
-      public com.google.protobuf.ByteString
-          getVersionBytes() {
-        java.lang.Object ref = version_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          version_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * version
-       * &#64;inject_tag: json:"version" 
-       * </pre>
-       *
-       * <code>string version = 2;</code>
-       * @param value The version to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVersion(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        version_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * version
-       * &#64;inject_tag: json:"version" 
-       * </pre>
-       *
-       * <code>string version = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearVersion() {
-        
-        version_ = getDefaultInstance().getVersion();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * version
-       * &#64;inject_tag: json:"version" 
-       * </pre>
-       *
-       * <code>string version = 2;</code>
-       * @param value The bytes for version to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVersionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        version_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object index_ = "";
       /**
        * <pre>
        * index
-       * &#64;inject_tag: json:"index" 
+       * &#64;inject_tag: json:"index"
        * </pre>
        *
-       * <code>string index = 3;</code>
+       * <code>string index = 2;</code>
        * @return The index.
        */
       public java.lang.String getIndex() {
@@ -1258,10 +1157,10 @@ public final class PBElasticSearch {
       /**
        * <pre>
        * index
-       * &#64;inject_tag: json:"index" 
+       * &#64;inject_tag: json:"index"
        * </pre>
        *
-       * <code>string index = 3;</code>
+       * <code>string index = 2;</code>
        * @return The bytes for index.
        */
       public com.google.protobuf.ByteString
@@ -1280,10 +1179,10 @@ public final class PBElasticSearch {
       /**
        * <pre>
        * index
-       * &#64;inject_tag: json:"index" 
+       * &#64;inject_tag: json:"index"
        * </pre>
        *
-       * <code>string index = 3;</code>
+       * <code>string index = 2;</code>
        * @param value The index to set.
        * @return This builder for chaining.
        */
@@ -1300,10 +1199,10 @@ public final class PBElasticSearch {
       /**
        * <pre>
        * index
-       * &#64;inject_tag: json:"index" 
+       * &#64;inject_tag: json:"index"
        * </pre>
        *
-       * <code>string index = 3;</code>
+       * <code>string index = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearIndex() {
@@ -1315,10 +1214,10 @@ public final class PBElasticSearch {
       /**
        * <pre>
        * index
-       * &#64;inject_tag: json:"index" 
+       * &#64;inject_tag: json:"index"
        * </pre>
        *
-       * <code>string index = 3;</code>
+       * <code>string index = 2;</code>
        * @param value The bytes for index to set.
        * @return This builder for chaining.
        */
@@ -1330,6 +1229,107 @@ public final class PBElasticSearch {
   checkByteStringIsUtf8(value);
         
         index_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <pre>
+       * type
+       * &#64;inject_tag: json:"type"
+       * </pre>
+       *
+       * <code>string type = 3;</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type
+       * &#64;inject_tag: json:"type"
+       * </pre>
+       *
+       * <code>string type = 3;</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type
+       * &#64;inject_tag: json:"type"
+       * </pre>
+       *
+       * <code>string type = 3;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type
+       * &#64;inject_tag: json:"type"
+       * </pre>
+       *
+       * <code>string type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = getDefaultInstance().getType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type
+       * &#64;inject_tag: json:"type"
+       * </pre>
+       *
+       * <code>string type = 3;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        type_ = value;
         onChanged();
         return this;
       }
@@ -1487,47 +1487,47 @@ public final class PBElasticSearch {
 
     /**
      * <pre>
-     * version
-     * &#64;inject_tag: json:"version" 
-     * </pre>
-     *
-     * <code>string version = 2;</code>
-     * @return The version.
-     */
-    java.lang.String getVersion();
-    /**
-     * <pre>
-     * version
-     * &#64;inject_tag: json:"version" 
-     * </pre>
-     *
-     * <code>string version = 2;</code>
-     * @return The bytes for version.
-     */
-    com.google.protobuf.ByteString
-        getVersionBytes();
-
-    /**
-     * <pre>
      * index
-     * &#64;inject_tag: json:"index" 
+     * &#64;inject_tag: json:"index"
      * </pre>
      *
-     * <code>string index = 3;</code>
+     * <code>string index = 2;</code>
      * @return The index.
      */
     java.lang.String getIndex();
     /**
      * <pre>
      * index
-     * &#64;inject_tag: json:"index" 
+     * &#64;inject_tag: json:"index"
      * </pre>
      *
-     * <code>string index = 3;</code>
+     * <code>string index = 2;</code>
      * @return The bytes for index.
      */
     com.google.protobuf.ByteString
         getIndexBytes();
+
+    /**
+     * <pre>
+     * type
+     * &#64;inject_tag: json:"type"
+     * </pre>
+     *
+     * <code>string type = 3;</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <pre>
+     * type
+     * &#64;inject_tag: json:"type"
+     * </pre>
+     *
+     * <code>string type = 3;</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
 
     /**
      * <pre>
@@ -1576,8 +1576,8 @@ public final class PBElasticSearch {
     }
     private ElasticSearchTarget() {
       column_ = java.util.Collections.emptyList();
-      version_ = "";
       index_ = "";
+      type_ = "";
       keyDelimiter_ = "";
     }
 
@@ -1624,13 +1624,13 @@ public final class PBElasticSearch {
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              version_ = s;
+              index_ = s;
               break;
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              index_ = s;
+              type_ = s;
               break;
             }
             case 32: {
@@ -1744,63 +1744,15 @@ public final class PBElasticSearch {
       return column_.get(index);
     }
 
-    public static final int VERSION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object version_;
-    /**
-     * <pre>
-     * version
-     * &#64;inject_tag: json:"version" 
-     * </pre>
-     *
-     * <code>string version = 2;</code>
-     * @return The version.
-     */
-    @java.lang.Override
-    public java.lang.String getVersion() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        version_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * version
-     * &#64;inject_tag: json:"version" 
-     * </pre>
-     *
-     * <code>string version = 2;</code>
-     * @return The bytes for version.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getVersionBytes() {
-      java.lang.Object ref = version_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        version_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int INDEX_FIELD_NUMBER = 3;
+    public static final int INDEX_FIELD_NUMBER = 2;
     private volatile java.lang.Object index_;
     /**
      * <pre>
      * index
-     * &#64;inject_tag: json:"index" 
+     * &#64;inject_tag: json:"index"
      * </pre>
      *
-     * <code>string index = 3;</code>
+     * <code>string index = 2;</code>
      * @return The index.
      */
     @java.lang.Override
@@ -1819,10 +1771,10 @@ public final class PBElasticSearch {
     /**
      * <pre>
      * index
-     * &#64;inject_tag: json:"index" 
+     * &#64;inject_tag: json:"index"
      * </pre>
      *
-     * <code>string index = 3;</code>
+     * <code>string index = 2;</code>
      * @return The bytes for index.
      */
     @java.lang.Override
@@ -1834,6 +1786,54 @@ public final class PBElasticSearch {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         index_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object type_;
+    /**
+     * <pre>
+     * type
+     * &#64;inject_tag: json:"type"
+     * </pre>
+     *
+     * <code>string type = 3;</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * type
+     * &#64;inject_tag: json:"type"
+     * </pre>
+     *
+     * <code>string type = 3;</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1921,11 +1921,11 @@ public final class PBElasticSearch {
       for (int i = 0; i < column_.size(); i++) {
         output.writeMessage(1, column_.get(i));
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, version_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(index_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, index_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
       }
       if (batchSize_ != 0) {
         output.writeInt32(4, batchSize_);
@@ -1946,11 +1946,11 @@ public final class PBElasticSearch {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, column_.get(i));
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, version_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(index_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, index_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
       }
       if (batchSize_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -1976,10 +1976,10 @@ public final class PBElasticSearch {
 
       if (!getColumnList()
           .equals(other.getColumnList())) return false;
-      if (!getVersion()
-          .equals(other.getVersion())) return false;
       if (!getIndex()
           .equals(other.getIndex())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
       if (getBatchSize()
           != other.getBatchSize()) return false;
       if (!getKeyDelimiter()
@@ -1999,10 +1999,10 @@ public final class PBElasticSearch {
         hash = (37 * hash) + COLUMN_FIELD_NUMBER;
         hash = (53 * hash) + getColumnList().hashCode();
       }
-      hash = (37 * hash) + VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getVersion().hashCode();
       hash = (37 * hash) + INDEX_FIELD_NUMBER;
       hash = (53 * hash) + getIndex().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
       hash = (37 * hash) + BATCH_SIZE_FIELD_NUMBER;
       hash = (53 * hash) + getBatchSize();
       hash = (37 * hash) + KEY_DELIMITER_FIELD_NUMBER;
@@ -2147,9 +2147,9 @@ public final class PBElasticSearch {
         } else {
           columnBuilder_.clear();
         }
-        version_ = "";
-
         index_ = "";
+
+        type_ = "";
 
         batchSize_ = 0;
 
@@ -2191,8 +2191,8 @@ public final class PBElasticSearch {
         } else {
           result.column_ = columnBuilder_.build();
         }
-        result.version_ = version_;
         result.index_ = index_;
+        result.type_ = type_;
         result.batchSize_ = batchSize_;
         result.keyDelimiter_ = keyDelimiter_;
         onBuilt();
@@ -2269,12 +2269,12 @@ public final class PBElasticSearch {
             }
           }
         }
-        if (!other.getVersion().isEmpty()) {
-          version_ = other.version_;
-          onChanged();
-        }
         if (!other.getIndex().isEmpty()) {
           index_ = other.index_;
+          onChanged();
+        }
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
           onChanged();
         }
         if (other.getBatchSize() != 0) {
@@ -2644,115 +2644,14 @@ public final class PBElasticSearch {
         return columnBuilder_;
       }
 
-      private java.lang.Object version_ = "";
-      /**
-       * <pre>
-       * version
-       * &#64;inject_tag: json:"version" 
-       * </pre>
-       *
-       * <code>string version = 2;</code>
-       * @return The version.
-       */
-      public java.lang.String getVersion() {
-        java.lang.Object ref = version_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          version_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * version
-       * &#64;inject_tag: json:"version" 
-       * </pre>
-       *
-       * <code>string version = 2;</code>
-       * @return The bytes for version.
-       */
-      public com.google.protobuf.ByteString
-          getVersionBytes() {
-        java.lang.Object ref = version_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          version_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * version
-       * &#64;inject_tag: json:"version" 
-       * </pre>
-       *
-       * <code>string version = 2;</code>
-       * @param value The version to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVersion(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        version_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * version
-       * &#64;inject_tag: json:"version" 
-       * </pre>
-       *
-       * <code>string version = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearVersion() {
-        
-        version_ = getDefaultInstance().getVersion();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * version
-       * &#64;inject_tag: json:"version" 
-       * </pre>
-       *
-       * <code>string version = 2;</code>
-       * @param value The bytes for version to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVersionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        version_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object index_ = "";
       /**
        * <pre>
        * index
-       * &#64;inject_tag: json:"index" 
+       * &#64;inject_tag: json:"index"
        * </pre>
        *
-       * <code>string index = 3;</code>
+       * <code>string index = 2;</code>
        * @return The index.
        */
       public java.lang.String getIndex() {
@@ -2770,10 +2669,10 @@ public final class PBElasticSearch {
       /**
        * <pre>
        * index
-       * &#64;inject_tag: json:"index" 
+       * &#64;inject_tag: json:"index"
        * </pre>
        *
-       * <code>string index = 3;</code>
+       * <code>string index = 2;</code>
        * @return The bytes for index.
        */
       public com.google.protobuf.ByteString
@@ -2792,10 +2691,10 @@ public final class PBElasticSearch {
       /**
        * <pre>
        * index
-       * &#64;inject_tag: json:"index" 
+       * &#64;inject_tag: json:"index"
        * </pre>
        *
-       * <code>string index = 3;</code>
+       * <code>string index = 2;</code>
        * @param value The index to set.
        * @return This builder for chaining.
        */
@@ -2812,10 +2711,10 @@ public final class PBElasticSearch {
       /**
        * <pre>
        * index
-       * &#64;inject_tag: json:"index" 
+       * &#64;inject_tag: json:"index"
        * </pre>
        *
-       * <code>string index = 3;</code>
+       * <code>string index = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearIndex() {
@@ -2827,10 +2726,10 @@ public final class PBElasticSearch {
       /**
        * <pre>
        * index
-       * &#64;inject_tag: json:"index" 
+       * &#64;inject_tag: json:"index"
        * </pre>
        *
-       * <code>string index = 3;</code>
+       * <code>string index = 2;</code>
        * @param value The bytes for index to set.
        * @return This builder for chaining.
        */
@@ -2842,6 +2741,107 @@ public final class PBElasticSearch {
   checkByteStringIsUtf8(value);
         
         index_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <pre>
+       * type
+       * &#64;inject_tag: json:"type"
+       * </pre>
+       *
+       * <code>string type = 3;</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type
+       * &#64;inject_tag: json:"type"
+       * </pre>
+       *
+       * <code>string type = 3;</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type
+       * &#64;inject_tag: json:"type"
+       * </pre>
+       *
+       * <code>string type = 3;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type
+       * &#64;inject_tag: json:"type"
+       * </pre>
+       *
+       * <code>string type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = getDefaultInstance().getType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type
+       * &#64;inject_tag: json:"type"
+       * </pre>
+       *
+       * <code>string type = 3;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        type_ = value;
         onChanged();
         return this;
       }
@@ -3067,17 +3067,17 @@ public final class PBElasticSearch {
       "\n-proto/types/model/syncjob/elasticsearc" +
       "h.proto\022\005model\032&proto/types/model/syncjo" +
       "b/column.proto\032/github.com/yu31/protoc-p" +
-      "lugin/proto/gosql.proto\"p\n\023ElasticSearch" +
-      "Source\022\035\n\006column\030\001 \003(\0132\r.model.Column\022\017\n" +
-      "\007version\030\002 \001(\t\022\r\n\005index\030\003 \001(\t\022\022\n\nbatch_s" +
-      "ize\030\004 \001(\005:\006\312\262\004\002\n\000\"\207\001\n\023ElasticSearchTarge" +
-      "t\022\035\n\006column\030\001 \003(\0132\r.model.Column\022\017\n\007vers" +
-      "ion\030\002 \001(\t\022\r\n\005index\030\003 \001(\t\022\022\n\nbatch_size\030\004" +
-      " \001(\005\022\025\n\rkey_delimiter\030\005 \001(\t:\006\312\262\004\002\n\000B~\n,c" +
-      "om.dataomnis.gproto.types.pbmodel.pbsync" +
-      "jobB\017PBElasticSearchP\000Z;github.com/DataW" +
-      "orkbench/gproto/xgo/types/pbmodel/pbsync" +
-      "jobb\006proto3"
+      "lugin/proto/gosql.proto\"m\n\023ElasticSearch" +
+      "Source\022\035\n\006column\030\001 \003(\0132\r.model.Column\022\r\n" +
+      "\005index\030\002 \001(\t\022\014\n\004type\030\003 \001(\t\022\022\n\nbatch_size" +
+      "\030\004 \001(\005:\006\312\262\004\002\n\000\"\204\001\n\023ElasticSearchTarget\022\035" +
+      "\n\006column\030\001 \003(\0132\r.model.Column\022\r\n\005index\030\002" +
+      " \001(\t\022\014\n\004type\030\003 \001(\t\022\022\n\nbatch_size\030\004 \001(\005\022\025" +
+      "\n\rkey_delimiter\030\005 \001(\t:\006\312\262\004\002\n\000B~\n,com.dat" +
+      "aomnis.gproto.types.pbmodel.pbsyncjobB\017P" +
+      "BElasticSearchP\000Z;github.com/DataWorkben" +
+      "ch/gproto/xgo/types/pbmodel/pbsyncjobb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3090,13 +3090,13 @@ public final class PBElasticSearch {
     internal_static_model_ElasticSearchSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_model_ElasticSearchSource_descriptor,
-        new java.lang.String[] { "Column", "Version", "Index", "BatchSize", });
+        new java.lang.String[] { "Column", "Index", "Type", "BatchSize", });
     internal_static_model_ElasticSearchTarget_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_model_ElasticSearchTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_model_ElasticSearchTarget_descriptor,
-        new java.lang.String[] { "Column", "Version", "Index", "BatchSize", "KeyDelimiter", });
+        new java.lang.String[] { "Column", "Index", "Type", "BatchSize", "KeyDelimiter", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(io.github.yu31.protoc.pb.pbgosql.PBGoSQL.serialize);

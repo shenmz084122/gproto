@@ -449,6 +449,37 @@ public final class AccountManageGrpc {
     return getCheckSessionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CreateSession,
+      com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CreateSession> getCreateSessionAuthMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateSessionAuth",
+      requestType = com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CreateSession.class,
+      responseType = com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CreateSession.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CreateSession,
+      com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CreateSession> getCreateSessionAuthMethod() {
+    io.grpc.MethodDescriptor<com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CreateSession, com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CreateSession> getCreateSessionAuthMethod;
+    if ((getCreateSessionAuthMethod = AccountManageGrpc.getCreateSessionAuthMethod) == null) {
+      synchronized (AccountManageGrpc.class) {
+        if ((getCreateSessionAuthMethod = AccountManageGrpc.getCreateSessionAuthMethod) == null) {
+          AccountManageGrpc.getCreateSessionAuthMethod = getCreateSessionAuthMethod =
+              io.grpc.MethodDescriptor.<com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CreateSession, com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CreateSession>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSessionAuth"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CreateSession.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CreateSession.getDefaultInstance()))
+              .setSchemaDescriptor(new AccountManageMethodDescriptorSupplier("CreateSessionAuth"))
+              .build();
+        }
+      }
+    }
+    return getCreateSessionAuthMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.dataomnis.gproto.types.pbrequest.PBRequestAccount.ListNotifications,
       com.dataomnis.gproto.types.pbresponse.PBResponseAccount.ListNotifications> getListNotificationsMethod;
 
@@ -757,6 +788,13 @@ public final class AccountManageGrpc {
     }
 
     /**
+     */
+    public void createSessionAuth(com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CreateSession request,
+        io.grpc.stub.StreamObserver<com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CreateSession> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSessionAuthMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * Notification API
      * </pre>
@@ -894,6 +932,13 @@ public final class AccountManageGrpc {
                 com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CheckSession,
                 com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CheckSession>(
                   this, METHODID_CHECK_SESSION)))
+          .addMethod(
+            getCreateSessionAuthMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CreateSession,
+                com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CreateSession>(
+                  this, METHODID_CREATE_SESSION_AUTH)))
           .addMethod(
             getListNotificationsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1066,6 +1111,14 @@ public final class AccountManageGrpc {
     }
 
     /**
+     */
+    public void createSessionAuth(com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CreateSession request,
+        io.grpc.stub.StreamObserver<com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CreateSession> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateSessionAuthMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
      * <pre>
      * Notification API
      * </pre>
@@ -1225,6 +1278,13 @@ public final class AccountManageGrpc {
     public com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CheckSession checkSession(com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CheckSession request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCheckSessionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CreateSession createSessionAuth(com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CreateSession request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateSessionAuthMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1399,6 +1459,14 @@ public final class AccountManageGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CreateSession> createSessionAuth(
+        com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CreateSession request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateSessionAuthMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * Notification API
      * </pre>
@@ -1456,11 +1524,12 @@ public final class AccountManageGrpc {
   private static final int METHODID_UPDATED_ACCESS_KEY = 11;
   private static final int METHODID_CREATE_SESSION = 12;
   private static final int METHODID_CHECK_SESSION = 13;
-  private static final int METHODID_LIST_NOTIFICATIONS = 14;
-  private static final int METHODID_DESCRIBE_NOTIFICATION = 15;
-  private static final int METHODID_CREATE_NOTIFICATION = 16;
-  private static final int METHODID_UPDATE_NOTIFICATION = 17;
-  private static final int METHODID_DELETE_NOTIFICATIONS = 18;
+  private static final int METHODID_CREATE_SESSION_AUTH = 14;
+  private static final int METHODID_LIST_NOTIFICATIONS = 15;
+  private static final int METHODID_DESCRIBE_NOTIFICATION = 16;
+  private static final int METHODID_CREATE_NOTIFICATION = 17;
+  private static final int METHODID_UPDATE_NOTIFICATION = 18;
+  private static final int METHODID_DELETE_NOTIFICATIONS = 19;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1534,6 +1603,10 @@ public final class AccountManageGrpc {
         case METHODID_CHECK_SESSION:
           serviceImpl.checkSession((com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CheckSession) request,
               (io.grpc.stub.StreamObserver<com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CheckSession>) responseObserver);
+          break;
+        case METHODID_CREATE_SESSION_AUTH:
+          serviceImpl.createSessionAuth((com.dataomnis.gproto.types.pbrequest.PBRequestAccount.CreateSession) request,
+              (io.grpc.stub.StreamObserver<com.dataomnis.gproto.types.pbresponse.PBResponseAccount.CreateSession>) responseObserver);
           break;
         case METHODID_LIST_NOTIFICATIONS:
           serviceImpl.listNotifications((com.dataomnis.gproto.types.pbrequest.PBRequestAccount.ListNotifications) request,
@@ -1630,6 +1703,7 @@ public final class AccountManageGrpc {
               .addMethod(getUpdatedAccessKeyMethod())
               .addMethod(getCreateSessionMethod())
               .addMethod(getCheckSessionMethod())
+              .addMethod(getCreateSessionAuthMethod())
               .addMethod(getListNotificationsMethod())
               .addMethod(getDescribeNotificationMethod())
               .addMethod(getCreateNotificationMethod())

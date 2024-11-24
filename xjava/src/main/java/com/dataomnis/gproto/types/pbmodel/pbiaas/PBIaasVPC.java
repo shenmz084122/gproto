@@ -1263,6 +1263,7 @@ public final class PBIaasVPC {
     /**
      * <pre>
      * Field for DescribeVxnets
+     *
      * &#64;inject_tag: json:"manager_ip"
      * </pre>
      *
@@ -1273,6 +1274,7 @@ public final class PBIaasVPC {
     /**
      * <pre>
      * Field for DescribeVxnets
+     *
      * &#64;inject_tag: json:"manager_ip"
      * </pre>
      *
@@ -2129,6 +2131,7 @@ public final class PBIaasVPC {
     /**
      * <pre>
      * Field for DescribeVxnets
+     *
      * &#64;inject_tag: json:"manager_ip"
      * </pre>
      *
@@ -2151,6 +2154,7 @@ public final class PBIaasVPC {
     /**
      * <pre>
      * Field for DescribeVxnets
+     *
      * &#64;inject_tag: json:"manager_ip"
      * </pre>
      *
@@ -4248,6 +4252,7 @@ public final class PBIaasVPC {
       /**
        * <pre>
        * Field for DescribeVxnets
+       *
        * &#64;inject_tag: json:"manager_ip"
        * </pre>
        *
@@ -4269,6 +4274,7 @@ public final class PBIaasVPC {
       /**
        * <pre>
        * Field for DescribeVxnets
+       *
        * &#64;inject_tag: json:"manager_ip"
        * </pre>
        *
@@ -4291,6 +4297,7 @@ public final class PBIaasVPC {
       /**
        * <pre>
        * Field for DescribeVxnets
+       *
        * &#64;inject_tag: json:"manager_ip"
        * </pre>
        *
@@ -4311,6 +4318,7 @@ public final class PBIaasVPC {
       /**
        * <pre>
        * Field for DescribeVxnets
+       *
        * &#64;inject_tag: json:"manager_ip"
        * </pre>
        *
@@ -4326,6 +4334,7 @@ public final class PBIaasVPC {
       /**
        * <pre>
        * Field for DescribeVxnets
+       *
        * &#64;inject_tag: json:"manager_ip"
        * </pre>
        *

@@ -9110,6 +9110,66 @@ public final class PBSyncManageSyncJob {
      * <code>.model.HiveTarget hive_target = 32;</code>
      */
     com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBHive.HiveTargetOrBuilder getHiveTargetOrBuilder();
+
+    /**
+     * <pre>
+     * oceanbase source
+     * &#64;inject_tag: json:"oceanbase_source"
+     * </pre>
+     *
+     * <code>.model.DBSource oceanbase_source = 33;</code>
+     * @return Whether the oceanbaseSource field is set.
+     */
+    boolean hasOceanbaseSource();
+    /**
+     * <pre>
+     * oceanbase source
+     * &#64;inject_tag: json:"oceanbase_source"
+     * </pre>
+     *
+     * <code>.model.DBSource oceanbase_source = 33;</code>
+     * @return The oceanbaseSource.
+     */
+    com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource getOceanbaseSource();
+    /**
+     * <pre>
+     * oceanbase source
+     * &#64;inject_tag: json:"oceanbase_source"
+     * </pre>
+     *
+     * <code>.model.DBSource oceanbase_source = 33;</code>
+     */
+    com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSourceOrBuilder getOceanbaseSourceOrBuilder();
+
+    /**
+     * <pre>
+     * oceanbase target
+     * &#64;inject_tag: json:"oceanbase_target"
+     * </pre>
+     *
+     * <code>.model.DBTarget oceanbase_target = 34;</code>
+     * @return Whether the oceanbaseTarget field is set.
+     */
+    boolean hasOceanbaseTarget();
+    /**
+     * <pre>
+     * oceanbase target
+     * &#64;inject_tag: json:"oceanbase_target"
+     * </pre>
+     *
+     * <code>.model.DBTarget oceanbase_target = 34;</code>
+     * @return The oceanbaseTarget.
+     */
+    com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget getOceanbaseTarget();
+    /**
+     * <pre>
+     * oceanbase target
+     * &#64;inject_tag: json:"oceanbase_target"
+     * </pre>
+     *
+     * <code>.model.DBTarget oceanbase_target = 34;</code>
+     */
+    com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTargetOrBuilder getOceanbaseTargetOrBuilder();
   }
   /**
    * Protobuf type {@code model.SyncResource}
@@ -9568,6 +9628,32 @@ public final class PBSyncManageSyncJob {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(hiveTarget_);
                 hiveTarget_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 266: {
+              com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource.Builder subBuilder = null;
+              if (oceanbaseSource_ != null) {
+                subBuilder = oceanbaseSource_.toBuilder();
+              }
+              oceanbaseSource_ = input.readMessage(com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(oceanbaseSource_);
+                oceanbaseSource_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 274: {
+              com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget.Builder subBuilder = null;
+              if (oceanbaseTarget_ != null) {
+                subBuilder = oceanbaseTarget_.toBuilder();
+              }
+              oceanbaseTarget_ = input.readMessage(com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(oceanbaseTarget_);
+                oceanbaseTarget_ = subBuilder.buildPartial();
               }
 
               break;
@@ -10916,6 +11002,88 @@ public final class PBSyncManageSyncJob {
       return getHiveTarget();
     }
 
+    public static final int OCEANBASE_SOURCE_FIELD_NUMBER = 33;
+    private com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource oceanbaseSource_;
+    /**
+     * <pre>
+     * oceanbase source
+     * &#64;inject_tag: json:"oceanbase_source"
+     * </pre>
+     *
+     * <code>.model.DBSource oceanbase_source = 33;</code>
+     * @return Whether the oceanbaseSource field is set.
+     */
+    @java.lang.Override
+    public boolean hasOceanbaseSource() {
+      return oceanbaseSource_ != null;
+    }
+    /**
+     * <pre>
+     * oceanbase source
+     * &#64;inject_tag: json:"oceanbase_source"
+     * </pre>
+     *
+     * <code>.model.DBSource oceanbase_source = 33;</code>
+     * @return The oceanbaseSource.
+     */
+    @java.lang.Override
+    public com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource getOceanbaseSource() {
+      return oceanbaseSource_ == null ? com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource.getDefaultInstance() : oceanbaseSource_;
+    }
+    /**
+     * <pre>
+     * oceanbase source
+     * &#64;inject_tag: json:"oceanbase_source"
+     * </pre>
+     *
+     * <code>.model.DBSource oceanbase_source = 33;</code>
+     */
+    @java.lang.Override
+    public com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSourceOrBuilder getOceanbaseSourceOrBuilder() {
+      return getOceanbaseSource();
+    }
+
+    public static final int OCEANBASE_TARGET_FIELD_NUMBER = 34;
+    private com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget oceanbaseTarget_;
+    /**
+     * <pre>
+     * oceanbase target
+     * &#64;inject_tag: json:"oceanbase_target"
+     * </pre>
+     *
+     * <code>.model.DBTarget oceanbase_target = 34;</code>
+     * @return Whether the oceanbaseTarget field is set.
+     */
+    @java.lang.Override
+    public boolean hasOceanbaseTarget() {
+      return oceanbaseTarget_ != null;
+    }
+    /**
+     * <pre>
+     * oceanbase target
+     * &#64;inject_tag: json:"oceanbase_target"
+     * </pre>
+     *
+     * <code>.model.DBTarget oceanbase_target = 34;</code>
+     * @return The oceanbaseTarget.
+     */
+    @java.lang.Override
+    public com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget getOceanbaseTarget() {
+      return oceanbaseTarget_ == null ? com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget.getDefaultInstance() : oceanbaseTarget_;
+    }
+    /**
+     * <pre>
+     * oceanbase target
+     * &#64;inject_tag: json:"oceanbase_target"
+     * </pre>
+     *
+     * <code>.model.DBTarget oceanbase_target = 34;</code>
+     */
+    @java.lang.Override
+    public com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTargetOrBuilder getOceanbaseTargetOrBuilder() {
+      return getOceanbaseTarget();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11025,6 +11193,12 @@ public final class PBSyncManageSyncJob {
       }
       if (hiveTarget_ != null) {
         output.writeMessage(32, getHiveTarget());
+      }
+      if (oceanbaseSource_ != null) {
+        output.writeMessage(33, getOceanbaseSource());
+      }
+      if (oceanbaseTarget_ != null) {
+        output.writeMessage(34, getOceanbaseTarget());
       }
       unknownFields.writeTo(output);
     }
@@ -11162,6 +11336,14 @@ public final class PBSyncManageSyncJob {
       if (hiveTarget_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32, getHiveTarget());
+      }
+      if (oceanbaseSource_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(33, getOceanbaseSource());
+      }
+      if (oceanbaseTarget_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(34, getOceanbaseTarget());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11338,6 +11520,16 @@ public final class PBSyncManageSyncJob {
         if (!getHiveTarget()
             .equals(other.getHiveTarget())) return false;
       }
+      if (hasOceanbaseSource() != other.hasOceanbaseSource()) return false;
+      if (hasOceanbaseSource()) {
+        if (!getOceanbaseSource()
+            .equals(other.getOceanbaseSource())) return false;
+      }
+      if (hasOceanbaseTarget() != other.hasOceanbaseTarget()) return false;
+      if (hasOceanbaseTarget()) {
+        if (!getOceanbaseTarget()
+            .equals(other.getOceanbaseTarget())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11476,6 +11668,14 @@ public final class PBSyncManageSyncJob {
       if (hasHiveTarget()) {
         hash = (37 * hash) + HIVE_TARGET_FIELD_NUMBER;
         hash = (53 * hash) + getHiveTarget().hashCode();
+      }
+      if (hasOceanbaseSource()) {
+        hash = (37 * hash) + OCEANBASE_SOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + getOceanbaseSource().hashCode();
+      }
+      if (hasOceanbaseTarget()) {
+        hash = (37 * hash) + OCEANBASE_TARGET_FIELD_NUMBER;
+        hash = (53 * hash) + getOceanbaseTarget().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -11802,6 +12002,18 @@ public final class PBSyncManageSyncJob {
           hiveTarget_ = null;
           hiveTargetBuilder_ = null;
         }
+        if (oceanbaseSourceBuilder_ == null) {
+          oceanbaseSource_ = null;
+        } else {
+          oceanbaseSource_ = null;
+          oceanbaseSourceBuilder_ = null;
+        }
+        if (oceanbaseTargetBuilder_ == null) {
+          oceanbaseTarget_ = null;
+        } else {
+          oceanbaseTarget_ = null;
+          oceanbaseTargetBuilder_ = null;
+        }
         return this;
       }
 
@@ -11988,6 +12200,16 @@ public final class PBSyncManageSyncJob {
         } else {
           result.hiveTarget_ = hiveTargetBuilder_.build();
         }
+        if (oceanbaseSourceBuilder_ == null) {
+          result.oceanbaseSource_ = oceanbaseSource_;
+        } else {
+          result.oceanbaseSource_ = oceanbaseSourceBuilder_.build();
+        }
+        if (oceanbaseTargetBuilder_ == null) {
+          result.oceanbaseTarget_ = oceanbaseTarget_;
+        } else {
+          result.oceanbaseTarget_ = oceanbaseTargetBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -12131,6 +12353,12 @@ public final class PBSyncManageSyncJob {
         }
         if (other.hasHiveTarget()) {
           mergeHiveTarget(other.getHiveTarget());
+        }
+        if (other.hasOceanbaseSource()) {
+          mergeOceanbaseSource(other.getOceanbaseSource());
+        }
+        if (other.hasOceanbaseTarget()) {
+          mergeOceanbaseTarget(other.getOceanbaseTarget());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -17407,6 +17635,334 @@ public final class PBSyncManageSyncJob {
           hiveTarget_ = null;
         }
         return hiveTargetBuilder_;
+      }
+
+      private com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource oceanbaseSource_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource, com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource.Builder, com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSourceOrBuilder> oceanbaseSourceBuilder_;
+      /**
+       * <pre>
+       * oceanbase source
+       * &#64;inject_tag: json:"oceanbase_source"
+       * </pre>
+       *
+       * <code>.model.DBSource oceanbase_source = 33;</code>
+       * @return Whether the oceanbaseSource field is set.
+       */
+      public boolean hasOceanbaseSource() {
+        return oceanbaseSourceBuilder_ != null || oceanbaseSource_ != null;
+      }
+      /**
+       * <pre>
+       * oceanbase source
+       * &#64;inject_tag: json:"oceanbase_source"
+       * </pre>
+       *
+       * <code>.model.DBSource oceanbase_source = 33;</code>
+       * @return The oceanbaseSource.
+       */
+      public com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource getOceanbaseSource() {
+        if (oceanbaseSourceBuilder_ == null) {
+          return oceanbaseSource_ == null ? com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource.getDefaultInstance() : oceanbaseSource_;
+        } else {
+          return oceanbaseSourceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * oceanbase source
+       * &#64;inject_tag: json:"oceanbase_source"
+       * </pre>
+       *
+       * <code>.model.DBSource oceanbase_source = 33;</code>
+       */
+      public Builder setOceanbaseSource(com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource value) {
+        if (oceanbaseSourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oceanbaseSource_ = value;
+          onChanged();
+        } else {
+          oceanbaseSourceBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * oceanbase source
+       * &#64;inject_tag: json:"oceanbase_source"
+       * </pre>
+       *
+       * <code>.model.DBSource oceanbase_source = 33;</code>
+       */
+      public Builder setOceanbaseSource(
+          com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource.Builder builderForValue) {
+        if (oceanbaseSourceBuilder_ == null) {
+          oceanbaseSource_ = builderForValue.build();
+          onChanged();
+        } else {
+          oceanbaseSourceBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * oceanbase source
+       * &#64;inject_tag: json:"oceanbase_source"
+       * </pre>
+       *
+       * <code>.model.DBSource oceanbase_source = 33;</code>
+       */
+      public Builder mergeOceanbaseSource(com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource value) {
+        if (oceanbaseSourceBuilder_ == null) {
+          if (oceanbaseSource_ != null) {
+            oceanbaseSource_ =
+              com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource.newBuilder(oceanbaseSource_).mergeFrom(value).buildPartial();
+          } else {
+            oceanbaseSource_ = value;
+          }
+          onChanged();
+        } else {
+          oceanbaseSourceBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * oceanbase source
+       * &#64;inject_tag: json:"oceanbase_source"
+       * </pre>
+       *
+       * <code>.model.DBSource oceanbase_source = 33;</code>
+       */
+      public Builder clearOceanbaseSource() {
+        if (oceanbaseSourceBuilder_ == null) {
+          oceanbaseSource_ = null;
+          onChanged();
+        } else {
+          oceanbaseSource_ = null;
+          oceanbaseSourceBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * oceanbase source
+       * &#64;inject_tag: json:"oceanbase_source"
+       * </pre>
+       *
+       * <code>.model.DBSource oceanbase_source = 33;</code>
+       */
+      public com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource.Builder getOceanbaseSourceBuilder() {
+        
+        onChanged();
+        return getOceanbaseSourceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * oceanbase source
+       * &#64;inject_tag: json:"oceanbase_source"
+       * </pre>
+       *
+       * <code>.model.DBSource oceanbase_source = 33;</code>
+       */
+      public com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSourceOrBuilder getOceanbaseSourceOrBuilder() {
+        if (oceanbaseSourceBuilder_ != null) {
+          return oceanbaseSourceBuilder_.getMessageOrBuilder();
+        } else {
+          return oceanbaseSource_ == null ?
+              com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource.getDefaultInstance() : oceanbaseSource_;
+        }
+      }
+      /**
+       * <pre>
+       * oceanbase source
+       * &#64;inject_tag: json:"oceanbase_source"
+       * </pre>
+       *
+       * <code>.model.DBSource oceanbase_source = 33;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource, com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource.Builder, com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSourceOrBuilder> 
+          getOceanbaseSourceFieldBuilder() {
+        if (oceanbaseSourceBuilder_ == null) {
+          oceanbaseSourceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource, com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSource.Builder, com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBSourceOrBuilder>(
+                  getOceanbaseSource(),
+                  getParentForChildren(),
+                  isClean());
+          oceanbaseSource_ = null;
+        }
+        return oceanbaseSourceBuilder_;
+      }
+
+      private com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget oceanbaseTarget_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget, com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget.Builder, com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTargetOrBuilder> oceanbaseTargetBuilder_;
+      /**
+       * <pre>
+       * oceanbase target
+       * &#64;inject_tag: json:"oceanbase_target"
+       * </pre>
+       *
+       * <code>.model.DBTarget oceanbase_target = 34;</code>
+       * @return Whether the oceanbaseTarget field is set.
+       */
+      public boolean hasOceanbaseTarget() {
+        return oceanbaseTargetBuilder_ != null || oceanbaseTarget_ != null;
+      }
+      /**
+       * <pre>
+       * oceanbase target
+       * &#64;inject_tag: json:"oceanbase_target"
+       * </pre>
+       *
+       * <code>.model.DBTarget oceanbase_target = 34;</code>
+       * @return The oceanbaseTarget.
+       */
+      public com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget getOceanbaseTarget() {
+        if (oceanbaseTargetBuilder_ == null) {
+          return oceanbaseTarget_ == null ? com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget.getDefaultInstance() : oceanbaseTarget_;
+        } else {
+          return oceanbaseTargetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * oceanbase target
+       * &#64;inject_tag: json:"oceanbase_target"
+       * </pre>
+       *
+       * <code>.model.DBTarget oceanbase_target = 34;</code>
+       */
+      public Builder setOceanbaseTarget(com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget value) {
+        if (oceanbaseTargetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oceanbaseTarget_ = value;
+          onChanged();
+        } else {
+          oceanbaseTargetBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * oceanbase target
+       * &#64;inject_tag: json:"oceanbase_target"
+       * </pre>
+       *
+       * <code>.model.DBTarget oceanbase_target = 34;</code>
+       */
+      public Builder setOceanbaseTarget(
+          com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget.Builder builderForValue) {
+        if (oceanbaseTargetBuilder_ == null) {
+          oceanbaseTarget_ = builderForValue.build();
+          onChanged();
+        } else {
+          oceanbaseTargetBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * oceanbase target
+       * &#64;inject_tag: json:"oceanbase_target"
+       * </pre>
+       *
+       * <code>.model.DBTarget oceanbase_target = 34;</code>
+       */
+      public Builder mergeOceanbaseTarget(com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget value) {
+        if (oceanbaseTargetBuilder_ == null) {
+          if (oceanbaseTarget_ != null) {
+            oceanbaseTarget_ =
+              com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget.newBuilder(oceanbaseTarget_).mergeFrom(value).buildPartial();
+          } else {
+            oceanbaseTarget_ = value;
+          }
+          onChanged();
+        } else {
+          oceanbaseTargetBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * oceanbase target
+       * &#64;inject_tag: json:"oceanbase_target"
+       * </pre>
+       *
+       * <code>.model.DBTarget oceanbase_target = 34;</code>
+       */
+      public Builder clearOceanbaseTarget() {
+        if (oceanbaseTargetBuilder_ == null) {
+          oceanbaseTarget_ = null;
+          onChanged();
+        } else {
+          oceanbaseTarget_ = null;
+          oceanbaseTargetBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * oceanbase target
+       * &#64;inject_tag: json:"oceanbase_target"
+       * </pre>
+       *
+       * <code>.model.DBTarget oceanbase_target = 34;</code>
+       */
+      public com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget.Builder getOceanbaseTargetBuilder() {
+        
+        onChanged();
+        return getOceanbaseTargetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * oceanbase target
+       * &#64;inject_tag: json:"oceanbase_target"
+       * </pre>
+       *
+       * <code>.model.DBTarget oceanbase_target = 34;</code>
+       */
+      public com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTargetOrBuilder getOceanbaseTargetOrBuilder() {
+        if (oceanbaseTargetBuilder_ != null) {
+          return oceanbaseTargetBuilder_.getMessageOrBuilder();
+        } else {
+          return oceanbaseTarget_ == null ?
+              com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget.getDefaultInstance() : oceanbaseTarget_;
+        }
+      }
+      /**
+       * <pre>
+       * oceanbase target
+       * &#64;inject_tag: json:"oceanbase_target"
+       * </pre>
+       *
+       * <code>.model.DBTarget oceanbase_target = 34;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget, com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget.Builder, com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTargetOrBuilder> 
+          getOceanbaseTargetFieldBuilder() {
+        if (oceanbaseTargetBuilder_ == null) {
+          oceanbaseTargetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget, com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTarget.Builder, com.dataomnis.gproto.types.pbmodel.pbsyncjob.PBRelationaldb.DBTargetOrBuilder>(
+                  getOceanbaseTarget(),
+                  getParentForChildren(),
+                  isClean());
+          oceanbaseTarget_ = null;
+        }
+        return oceanbaseTargetBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -23649,10 +24205,10 @@ public final class PBSyncManageSyncJob {
       "\022\034\n\007created\030\013 \001(\003B\013\342\337\037\007\022\005\262\001\0020\000\022\034\n\007update" +
       "d\030\014 \001(\003B\013\342\337\037\007\022\005\262\001\0020\000\022_\n\013source_type\030\r \001(" +
       "\0162\026.model.DataSource.TypeB2\342\337\037\027\n\025\n\014is_di" +
-      "rectory\022\005\322\001\002\030\000\242\241\037\004\252\006\0010\342\337\037\013\022\t\332\001\0060\0008\020X\001\022_\n" +
+      "rectory\022\005\322\001\002\030\000\242\241\037\004\252\006\0010\342\337\037\013\022\t\332\001\0060\0008\021X\001\022_\n" +
       "\013target_type\030\016 \001(\0162\026.model.DataSource.Ty" +
       "peB2\342\337\037\027\n\025\n\014is_directory\022\005\322\001\002\030\000\242\241\037\004\252\006\0010\342" +
-      "\337\037\013\022\t\332\001\0060\0008\020X\001\0221\n\021sync_job_property\030\017 \001(" +
+      "\337\037\013\022\t\332\001\0060\0008\021X\001\0221\n\021sync_job_property\030\017 \001(" +
       "\0132\026.model.SyncJobProperty\"J\n\004Type\022\r\n\tTyp" +
       "eUnset\020\000\022\017\n\013OfflineFull\020\001\022\024\n\020OfflineIncr" +
       "ement\020\002\022\014\n\010RealTime\020\003\"3\n\006Status\022\017\n\013Statu" +
@@ -23678,7 +24234,7 @@ public final class PBSyncManageSyncJob {
       "\002 \001(\005B\010\242\241\037\004\252\006\0010\022.\n\004rate\030\003 \001(\0162 .model.Ch" +
       "annelControl.RatePolicy\022\r\n\005bytes\030\004 \001(\005\"9" +
       "\n\nRatePolicy\022\023\n\017RatePolicyUnset\020\000\022\t\n\005Lim" +
-      "it\020\001\022\013\n\007UnLimit\020\002:\006\312\262\004\002\n\000\"\204\013\n\014SyncResour" +
+      "it\020\001\022\013\n\007UnLimit\020\002:\006\312\262\004\002\n\000\"\332\013\n\014SyncResour" +
       "ce\022%\n\014mysql_source\030\001 \001(\0132\017.model.DBSourc" +
       "e\022%\n\014mysql_target\030\002 \001(\0132\017.model.DBTarget" +
       "\022&\n\roracle_source\030\003 \001(\0132\017.model.DBSource" +
@@ -23713,45 +24269,48 @@ public final class PBSyncManageSyncJob {
       "el.SqlServerCdcSource\022/\n\020log_miner_sourc" +
       "e\030\036 \001(\0132\025.model.LogMinerSource\022(\n\014redis_" +
       "target\030\037 \001(\0132\022.model.RedisTarget\022&\n\013hive" +
-      "_target\030  \001(\0132\021.model.HiveTarget:\006\312\262\004\002\n\000" +
-      "\"\353\006\n\017SyncJobSchedule\022M\n\017schedule_policy\030" +
-      "\001 \001(\0162%.model.SyncJobSchedule.SchedulePo" +
-      "licyB\r\342\337\037\t\022\007\332\001\0040\000X\001\022>\n\010executed\030\002 \001(\003B,\342" +
-      "\337\037\032\n\030\n\017schedule_policy\022\005\332\001\002\030\002\342\337\037\n\022\010\262\001\005@\200" +
-      "\206\203\017\0224\n\nparameters\030\003 \003(\0132 .model.SyncJobS" +
-      "chedule.Parameter\022\034\n\007started\030\004 \001(\003B\013\342\337\037\007" +
-      "\022\005\262\001\002@\000\022\032\n\005ended\030\005 \001(\003B\013\342\337\037\007\022\005\262\001\002@\000\022S\n\022c" +
-      "oncurrency_policy\030\006 \001(\0162(.model.SyncJobS" +
-      "chedule.ConcurrencyPolicyB\r\342\337\037\t\022\007\332\001\0040\000X\001" +
-      "\022b\n\013period_type\030\007 \001(\tBM\342\337\037\032\n\030\n\017schedule_" +
-      "policy\022\005\332\001\002\030\001\342\337\037+\022)\302\001&J\006minuteJ\004hourJ\003da" +
-      "yJ\004weekJ\005monthJ\004year\022;\n\007express\030\010 \001(\tB*\342" +
-      "\337\037\032\n\030\n\017schedule_policy\022\005\332\001\002\030\001\342\337\037\010\022\006\302\001\003\200\005" +
-      "\001\022\036\n\007timeout\030\t \001(\005B\r\342\337\037\t\022\007\262\001\0048d@\000\032O\n\tPar" +
-      "ameter\022\037\n\003key\030\001 \001(\tB\022\342\337\037\016\022\014\302\001\t\300\001\001\310\001@\210\005\001\022" +
-      "!\n\005value\030\002 \001(\tB\022\342\337\037\016\022\014\302\001\t\300\001\001\310\001@\210\005\001\"\\\n\016Sc" +
-      "hedulePolicy\022\027\n\023SchedulePolicyUnset\020\000\022\017\n" +
-      "\013Periodicity\020\001\022\017\n\013AppointTime\020\002\022\017\n\013Immed" +
-      "iately\020\003\"S\n\021ConcurrencyPolicy\022\032\n\026Concurr" +
-      "encyPolicyUnset\020\000\022\t\n\005Allow\020\001\022\n\n\006Forbid\020\002" +
-      "\022\013\n\007Replace\020\003\"7\n\013RetryPolicy\022\024\n\020RetryPol" +
-      "icyUnset\020\000\022\010\n\004None\020\001\022\010\n\004Auto\020\002:\006\312\262\004\002\n\000\"\207" +
-      "\004\n\016SyncJobRelease\022%\n\010space_id\030\001 \001(\tB\023\342\337\037" +
-      "\017\022\r\302\001\n\360\001\024\312\002\004wks-\022\037\n\002id\030\002 \001(\tB\023\342\337\037\017\022\r\302\001\n\360" +
-      "\001\024\312\002\004syj-\022\035\n\007version\030\003 \001(\tB\014\342\337\037\010\022\006\302\001\003\360\001\020" +
-      "\022\036\n\004name\030\004 \001(\tB\020\342\337\037\014\022\n\302\001\007\220\002\002\230\002\200\001\0220\n\004type" +
-      "\030\005 \001(\0162\023.model.SyncJob.TypeB\r\342\337\037\t\022\007\332\001\004@\000" +
-      "X\001\022,\n\006status\030\006 \001(\0162\034.model.SyncJobReleas" +
-      "e.Status\022\014\n\004desc\030\007 \001(\t\022 \n\ncreated_by\030\010 \001" +
-      "(\tB\014\342\337\037\010\022\006\302\001\003\230\002@\022\034\n\007created\030\t \001(\003B\013\342\337\037\007\022" +
-      "\005\262\001\0020\000\022\034\n\007updated\030\n \001(\003B\013\342\337\037\007\022\005\262\001\0020\000\022 \n\010" +
-      "sync_job\030\013 \001(\0132\016.model.SyncJob\0221\n\021sync_j" +
-      "ob_property\030\014 \001(\0132\026.model.SyncJobPropert" +
-      "y\"M\n\006Status\022\017\n\013StatusUnset\020\000\022\013\n\007Deleted\020" +
-      "\001\022\n\n\006Inline\020\002\022\013\n\007Offline\020\003\022\014\n\010Finished\020\004" +
-      "Bn\n\"com.dataomnis.gproto.types.pbmodelB\023" +
-      "PBSyncManageSyncJobP\000Z1github.com/DataWo" +
-      "rkbench/gproto/xgo/types/pbmodelb\006proto3"
+      "_target\030  \001(\0132\021.model.HiveTarget\022)\n\020ocea" +
+      "nbase_source\030! \001(\0132\017.model.DBSource\022)\n\020o" +
+      "ceanbase_target\030\" \001(\0132\017.model.DBTarget:\006" +
+      "\312\262\004\002\n\000\"\353\006\n\017SyncJobSchedule\022M\n\017schedule_p" +
+      "olicy\030\001 \001(\0162%.model.SyncJobSchedule.Sche" +
+      "dulePolicyB\r\342\337\037\t\022\007\332\001\0040\000X\001\022>\n\010executed\030\002 " +
+      "\001(\003B,\342\337\037\032\n\030\n\017schedule_policy\022\005\332\001\002\030\002\342\337\037\n\022" +
+      "\010\262\001\005@\200\206\203\017\0224\n\nparameters\030\003 \003(\0132 .model.Sy" +
+      "ncJobSchedule.Parameter\022\034\n\007started\030\004 \001(\003" +
+      "B\013\342\337\037\007\022\005\262\001\002@\000\022\032\n\005ended\030\005 \001(\003B\013\342\337\037\007\022\005\262\001\002@" +
+      "\000\022S\n\022concurrency_policy\030\006 \001(\0162(.model.Sy" +
+      "ncJobSchedule.ConcurrencyPolicyB\r\342\337\037\t\022\007\332" +
+      "\001\0040\000X\001\022b\n\013period_type\030\007 \001(\tBM\342\337\037\032\n\030\n\017sch" +
+      "edule_policy\022\005\332\001\002\030\001\342\337\037+\022)\302\001&J\006minuteJ\004ho" +
+      "urJ\003dayJ\004weekJ\005monthJ\004year\022;\n\007express\030\010 " +
+      "\001(\tB*\342\337\037\032\n\030\n\017schedule_policy\022\005\332\001\002\030\001\342\337\037\010\022" +
+      "\006\302\001\003\200\005\001\022\036\n\007timeout\030\t \001(\005B\r\342\337\037\t\022\007\262\001\0048d@\000\032" +
+      "O\n\tParameter\022\037\n\003key\030\001 \001(\tB\022\342\337\037\016\022\014\302\001\t\300\001\001\310" +
+      "\001@\210\005\001\022!\n\005value\030\002 \001(\tB\022\342\337\037\016\022\014\302\001\t\300\001\001\310\001@\210\005\001" +
+      "\"\\\n\016SchedulePolicy\022\027\n\023SchedulePolicyUnse" +
+      "t\020\000\022\017\n\013Periodicity\020\001\022\017\n\013AppointTime\020\002\022\017\n" +
+      "\013Immediately\020\003\"S\n\021ConcurrencyPolicy\022\032\n\026C" +
+      "oncurrencyPolicyUnset\020\000\022\t\n\005Allow\020\001\022\n\n\006Fo" +
+      "rbid\020\002\022\013\n\007Replace\020\003\"7\n\013RetryPolicy\022\024\n\020Re" +
+      "tryPolicyUnset\020\000\022\010\n\004None\020\001\022\010\n\004Auto\020\002:\006\312\262" +
+      "\004\002\n\000\"\207\004\n\016SyncJobRelease\022%\n\010space_id\030\001 \001(" +
+      "\tB\023\342\337\037\017\022\r\302\001\n\360\001\024\312\002\004wks-\022\037\n\002id\030\002 \001(\tB\023\342\337\037\017" +
+      "\022\r\302\001\n\360\001\024\312\002\004syj-\022\035\n\007version\030\003 \001(\tB\014\342\337\037\010\022\006" +
+      "\302\001\003\360\001\020\022\036\n\004name\030\004 \001(\tB\020\342\337\037\014\022\n\302\001\007\220\002\002\230\002\200\001\0220" +
+      "\n\004type\030\005 \001(\0162\023.model.SyncJob.TypeB\r\342\337\037\t\022" +
+      "\007\332\001\004@\000X\001\022,\n\006status\030\006 \001(\0162\034.model.SyncJob" +
+      "Release.Status\022\014\n\004desc\030\007 \001(\t\022 \n\ncreated_" +
+      "by\030\010 \001(\tB\014\342\337\037\010\022\006\302\001\003\230\002@\022\034\n\007created\030\t \001(\003B" +
+      "\013\342\337\037\007\022\005\262\001\0020\000\022\034\n\007updated\030\n \001(\003B\013\342\337\037\007\022\005\262\001\002" +
+      "0\000\022 \n\010sync_job\030\013 \001(\0132\016.model.SyncJob\0221\n\021" +
+      "sync_job_property\030\014 \001(\0132\026.model.SyncJobP" +
+      "roperty\"M\n\006Status\022\017\n\013StatusUnset\020\000\022\013\n\007De" +
+      "leted\020\001\022\n\n\006Inline\020\002\022\013\n\007Offline\020\003\022\014\n\010Fini" +
+      "shed\020\004Bn\n\"com.dataomnis.gproto.types.pbm" +
+      "odelB\023PBSyncManageSyncJobP\000Z1github.com/" +
+      "DataWorkbench/gproto/xgo/types/pbmodelb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23804,7 +24363,7 @@ public final class PBSyncManageSyncJob {
     internal_static_model_SyncResource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_model_SyncResource_descriptor,
-        new java.lang.String[] { "MysqlSource", "MysqlTarget", "OracleSource", "OracleTarget", "Db2Source", "Db2Target", "PostgresqlSource", "PostgresqlTarget", "SqlserverSource", "SqlserverTarget", "ClickHouseSource", "ClickHouseTarget", "SapHanaSource", "SapHanaTarget", "MongodbSource", "MongodbTarget", "ElasticSearchSource", "ElasticSearchTarget", "HdfsSource", "HdfsTarget", "FtpSource", "FtpTarget", "HbaseSource", "HbaseTarget", "KafkaSource", "KafkaTarget", "BinlogSource", "PgWalSource", "SqlServerCdcSource", "LogMinerSource", "RedisTarget", "HiveTarget", });
+        new java.lang.String[] { "MysqlSource", "MysqlTarget", "OracleSource", "OracleTarget", "Db2Source", "Db2Target", "PostgresqlSource", "PostgresqlTarget", "SqlserverSource", "SqlserverTarget", "ClickHouseSource", "ClickHouseTarget", "SapHanaSource", "SapHanaTarget", "MongodbSource", "MongodbTarget", "ElasticSearchSource", "ElasticSearchTarget", "HdfsSource", "HdfsTarget", "FtpSource", "FtpTarget", "HbaseSource", "HbaseTarget", "KafkaSource", "KafkaTarget", "BinlogSource", "PgWalSource", "SqlServerCdcSource", "LogMinerSource", "RedisTarget", "HiveTarget", "OceanbaseSource", "OceanbaseTarget", });
     internal_static_model_SyncJobSchedule_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_model_SyncJobSchedule_fieldAccessorTable = new

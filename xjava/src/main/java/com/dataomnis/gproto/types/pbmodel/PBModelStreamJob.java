@@ -7014,6 +7014,12 @@ public final class PBModelStreamJob {
      */
     com.google.protobuf.ByteString
         getPyExecutableBytes();
+
+    /**
+     * <code>int32 model = 11 [(.defaults.field) = { ... }</code>
+     * @return The model.
+     */
+    int getModel();
   }
   /**
    * <pre>
@@ -7150,6 +7156,11 @@ public final class PBModelStreamJob {
               java.lang.String s = input.readStringRequireUtf8();
 
               pyExecutable_ = s;
+              break;
+            }
+            case 88: {
+
+              model_ = input.readInt32();
               break;
             }
             default: {
@@ -7706,6 +7717,17 @@ public final class PBModelStreamJob {
       }
     }
 
+    public static final int MODEL_FIELD_NUMBER = 11;
+    private int model_;
+    /**
+     * <code>int32 model = 11 [(.defaults.field) = { ... }</code>
+     * @return The model.
+     */
+    @java.lang.Override
+    public int getModel() {
+      return model_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7749,6 +7771,9 @@ public final class PBModelStreamJob {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pyExecutable_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, pyExecutable_);
+      }
+      if (model_ != 0) {
+        output.writeInt32(11, model_);
       }
       unknownFields.writeTo(output);
     }
@@ -7820,6 +7845,10 @@ public final class PBModelStreamJob {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pyExecutable_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, pyExecutable_);
       }
+      if (model_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(11, model_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7855,6 +7884,8 @@ public final class PBModelStreamJob {
           .equals(other.getPyRequirementsList())) return false;
       if (!getPyExecutable()
           .equals(other.getPyExecutable())) return false;
+      if (getModel()
+          != other.getModel()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7898,6 +7929,8 @@ public final class PBModelStreamJob {
       }
       hash = (37 * hash) + PY_EXECUTABLE_FIELD_NUMBER;
       hash = (53 * hash) + getPyExecutable().hashCode();
+      hash = (37 * hash) + MODEL_FIELD_NUMBER;
+      hash = (53 * hash) + getModel();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8056,6 +8089,8 @@ public final class PBModelStreamJob {
         bitField0_ = (bitField0_ & ~0x00000020);
         pyExecutable_ = "";
 
+        model_ = 0;
+
         return this;
       }
 
@@ -8117,6 +8152,7 @@ public final class PBModelStreamJob {
         }
         result.pyRequirements_ = pyRequirements_;
         result.pyExecutable_ = pyExecutable_;
+        result.model_ = model_;
         onBuilt();
         return result;
       }
@@ -8239,6 +8275,9 @@ public final class PBModelStreamJob {
         if (!other.getPyExecutable().isEmpty()) {
           pyExecutable_ = other.pyExecutable_;
           onChanged();
+        }
+        if (other.getModel() != 0) {
+          setModel(other.getModel());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9580,6 +9619,37 @@ public final class PBModelStreamJob {
         onChanged();
         return this;
       }
+
+      private int model_ ;
+      /**
+       * <code>int32 model = 11 [(.defaults.field) = { ... }</code>
+       * @return The model.
+       */
+      @java.lang.Override
+      public int getModel() {
+        return model_;
+      }
+      /**
+       * <code>int32 model = 11 [(.defaults.field) = { ... }</code>
+       * @param value The model to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModel(int value) {
+        
+        model_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 model = 11 [(.defaults.field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModel() {
+        
+        model_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9675,6 +9745,7 @@ public final class PBModelStreamJob {
     /**
      * <pre>
      * ------ Period Options ------
+     *
      * Timestamp of start time of the validity period, unit in seconds.
      * Not required, default 31507200(1971-01-01 00:00:00), means no limit.
      * &#64;inject_tag: json:"started"
@@ -9773,6 +9844,7 @@ public final class PBModelStreamJob {
     /**
      * <pre>
      * ------ Advanced (Retry) options ------
+     *
      * Timeout for task execution. Default 0 and means never timeout, unit minutes, Max 100 min.
      * &#64;inject_tag: json:"timeout"
      * </pre>
@@ -10430,6 +10502,7 @@ public final class PBModelStreamJob {
     /**
      * <pre>
      * ------ Period Options ------
+     *
      * Timestamp of start time of the validity period, unit in seconds.
      * Not required, default 31507200(1971-01-01 00:00:00), means no limit.
      * &#64;inject_tag: json:"started"
@@ -10598,6 +10671,7 @@ public final class PBModelStreamJob {
     /**
      * <pre>
      * ------ Advanced (Retry) options ------
+     *
      * Timeout for task execution. Default 0 and means never timeout, unit minutes, Max 100 min.
      * &#64;inject_tag: json:"timeout"
      * </pre>
@@ -11289,6 +11363,7 @@ public final class PBModelStreamJob {
       /**
        * <pre>
        * ------ Period Options ------
+       *
        * Timestamp of start time of the validity period, unit in seconds.
        * Not required, default 31507200(1971-01-01 00:00:00), means no limit.
        * &#64;inject_tag: json:"started"
@@ -11304,6 +11379,7 @@ public final class PBModelStreamJob {
       /**
        * <pre>
        * ------ Period Options ------
+       *
        * Timestamp of start time of the validity period, unit in seconds.
        * Not required, default 31507200(1971-01-01 00:00:00), means no limit.
        * &#64;inject_tag: json:"started"
@@ -11322,6 +11398,7 @@ public final class PBModelStreamJob {
       /**
        * <pre>
        * ------ Period Options ------
+       *
        * Timestamp of start time of the validity period, unit in seconds.
        * Not required, default 31507200(1971-01-01 00:00:00), means no limit.
        * &#64;inject_tag: json:"started"
@@ -11691,6 +11768,7 @@ public final class PBModelStreamJob {
       /**
        * <pre>
        * ------ Advanced (Retry) options ------
+       *
        * Timeout for task execution. Default 0 and means never timeout, unit minutes, Max 100 min.
        * &#64;inject_tag: json:"timeout"
        * </pre>
@@ -11705,6 +11783,7 @@ public final class PBModelStreamJob {
       /**
        * <pre>
        * ------ Advanced (Retry) options ------
+       *
        * Timeout for task execution. Default 0 and means never timeout, unit minutes, Max 100 min.
        * &#64;inject_tag: json:"timeout"
        * </pre>
@@ -11722,6 +11801,7 @@ public final class PBModelStreamJob {
       /**
        * <pre>
        * ------ Advanced (Retry) options ------
+       *
        * Timeout for task execution. Default 0 and means never timeout, unit minutes, Max 100 min.
        * &#64;inject_tag: json:"timeout"
        * </pre>
@@ -14288,7 +14368,7 @@ public final class PBModelStreamJob {
       "ode\030\005 \001(\0132\026.flink.FlinkPythonCodeB\036\342\337\037\017\n" +
       "\r\n\004type\022\005\332\001\002\030\004\342\337\037\007\022\005\342\001\002\020\001\022K\n\013python_file" +
       "\030\006 \001(\0132\026.flink.FlinkPythonFileB\036\342\337\037\017\n\r\n\004" +
-      "type\022\005\332\001\002\030\005\342\337\037\007\022\005\342\001\002\020\001:\006\312\262\004\002\n\000\"\370\003\n\rStrea" +
+      "type\022\005\332\001\002\030\005\342\337\037\007\022\005\342\001\002\020\001:\006\312\262\004\002\n\000\"\236\004\n\rStrea" +
       "mJobArgs\022@\n\ncluster_id\030\001 \001(\tB,\342\337\037\025\n\023\n\ncl" +
       "uster_id\022\005\302\001\002\"\000\342\337\037\017\022\r\302\001\n\360\001\024\312\002\004cfi-\022*\n\013pa" +
       "rallelism\030\002 \001(\005B\025\242\241\037\004\252\006\0011\342\337\037\t\022\007\262\001\0048d@\000\022&" +
@@ -14301,45 +14381,46 @@ public final class PBModelStreamJob {
       "\n\010py_files\030\010 \003(\tB\027\342\337\037\023\022\021\352\001\0168dZ\n\302\001\007\312\002\004res" +
       "-\0220\n\017py_requirements\030\t \003(\tB\027\342\337\037\023\022\021\352\001\0168dZ" +
       "\n\302\001\007\312\002\004res-\022$\n\rpy_executable\030\n \001(\tB\r\342\337\037\t" +
-      "\022\007\302\001\004\230\002\377\001:\006\312\262\004\002\n\000\"\266\007\n\021StreamJobSchedule\022" +
-      "O\n\017schedule_policy\030\001 \001(\0162\'.model.StreamJ" +
-      "obSchedule.SchedulePolicyB\r\342\337\037\t\022\007\332\001\0040\000X\001" +
-      "\022>\n\010executed\030\002 \001(\003B,\342\337\037\032\n\030\n\017schedule_pol" +
-      "icy\022\005\332\001\002\030\002\342\337\037\n\022\010\262\001\005@\200\206\203\017\022\034\n\007started\030\004 \001(" +
-      "\003B\013\342\337\037\007\022\005\262\001\002@\000\022\032\n\005ended\030\005 \001(\003B\013\342\337\037\007\022\005\262\001\002" +
-      "@\000\022U\n\022concurrency_policy\030\006 \001(\0162*.model.S" +
-      "treamJobSchedule.ConcurrencyPolicyB\r\342\337\037\t" +
-      "\022\007\332\001\0040\000X\001\022b\n\013period_type\030\007 \001(\tBM\342\337\037\032\n\030\n\017" +
-      "schedule_policy\022\005\332\001\002\030\001\342\337\037+\022)\302\001&J\006minuteJ" +
-      "\004hourJ\003dayJ\004weekJ\005monthJ\004year\022;\n\007express" +
-      "\030\010 \001(\tB*\342\337\037\032\n\030\n\017schedule_policy\022\005\332\001\002\030\001\342\337" +
-      "\037\010\022\006\302\001\003\200\005\001\022\036\n\007timeout\030\t \001(\005B\r\342\337\037\t\022\007\262\001\0048d" +
-      "@\000\022I\n\014retry_policy\030\n \001(\0162$.model.StreamJ" +
-      "obSchedule.RetryPolicyB\r\342\337\037\t\022\007\332\001\0040\000X\001\022=\n" +
-      "\013retry_limit\030\013 \001(\005B(\342\337\037\027\n\025\n\014retry_policy" +
-      "\022\005\332\001\002\030\002\342\337\037\t\022\007\262\001\0048d@\000\022@\n\016retry_interval\030\014" +
-      " \001(\005B(\342\337\037\027\n\025\n\014retry_policy\022\005\332\001\002\030\002\342\337\037\t\022\007\262" +
-      "\001\0048\036@\001\"\\\n\016SchedulePolicy\022\027\n\023SchedulePoli" +
-      "cyUnset\020\000\022\017\n\013Periodicity\020\001\022\017\n\013AppointTim" +
-      "e\020\002\022\017\n\013Immediately\020\003\"S\n\021ConcurrencyPolic" +
-      "y\022\032\n\026ConcurrencyPolicyUnset\020\000\022\t\n\005Allow\020\001" +
-      "\022\n\n\006Forbid\020\002\022\013\n\007Replace\020\003\"7\n\013RetryPolicy" +
-      "\022\024\n\020RetryPolicyUnset\020\000\022\010\n\004None\020\001\022\010\n\004Auto" +
-      "\020\002:\006\312\262\004\002\n\000\"\273\003\n\020StreamJobRelease\022%\n\010space" +
-      "_id\030\001 \001(\tB\023\342\337\037\017\022\r\302\001\n\360\001\024\312\002\004wks-\022\037\n\002id\030\002 \001" +
-      "(\tB\023\342\337\037\017\022\r\302\001\n\360\001\024\312\002\004stj-\022\035\n\007version\030\003 \001(\t" +
-      "B\014\342\337\037\010\022\006\302\001\003\360\001\020\022\036\n\004name\030\004 \001(\tB\020\342\337\037\014\022\n\302\001\007\220" +
-      "\002\002\230\002\200\001\0222\n\004type\030\005 \001(\0162\025.model.StreamJob.T" +
-      "ypeB\r\342\337\037\t\022\007\332\001\0040\000X\001\022.\n\006status\030\006 \001(\0162\036.mod" +
-      "el.StreamJobRelease.Status\022\014\n\004desc\030\007 \001(\t" +
-      "\022#\n\ncreated_by\030\010 \001(\tB\017\342\337\037\013\022\t\302\001\006\200\002\000\210\002A\022\034\n" +
-      "\007created\030\t \001(\003B\013\342\337\037\007\022\005\262\001\0020\000\022\034\n\007updated\030\n" +
-      " \001(\003B\013\342\337\037\007\022\005\262\001\0020\000\"M\n\006Status\022\017\n\013StatusUns" +
-      "et\020\000\022\n\n\006Inline\020\001\022\013\n\007Offline\020\002\022\013\n\007Deleted" +
-      "\020\003\022\014\n\010Finished\020\004Bk\n\"com.dataomnis.gproto" +
-      ".types.pbmodelB\020PBModelStreamJobP\000Z1gith" +
-      "ub.com/DataWorkbench/gproto/xgo/types/pb" +
-      "modelb\006proto3"
+      "\022\007\302\001\004\230\002\377\001\022$\n\005model\030\013 \001(\005B\025\242\241\037\004\252\006\0011\342\337\037\t\022\007" +
+      "\262\001\0048d@\000:\006\312\262\004\002\n\000\"\266\007\n\021StreamJobSchedule\022O\n" +
+      "\017schedule_policy\030\001 \001(\0162\'.model.StreamJob" +
+      "Schedule.SchedulePolicyB\r\342\337\037\t\022\007\332\001\0040\000X\001\022>" +
+      "\n\010executed\030\002 \001(\003B,\342\337\037\032\n\030\n\017schedule_polic" +
+      "y\022\005\332\001\002\030\002\342\337\037\n\022\010\262\001\005@\200\206\203\017\022\034\n\007started\030\004 \001(\003B" +
+      "\013\342\337\037\007\022\005\262\001\002@\000\022\032\n\005ended\030\005 \001(\003B\013\342\337\037\007\022\005\262\001\002@\000" +
+      "\022U\n\022concurrency_policy\030\006 \001(\0162*.model.Str" +
+      "eamJobSchedule.ConcurrencyPolicyB\r\342\337\037\t\022\007" +
+      "\332\001\0040\000X\001\022b\n\013period_type\030\007 \001(\tBM\342\337\037\032\n\030\n\017sc" +
+      "hedule_policy\022\005\332\001\002\030\001\342\337\037+\022)\302\001&J\006minuteJ\004h" +
+      "ourJ\003dayJ\004weekJ\005monthJ\004year\022;\n\007express\030\010" +
+      " \001(\tB*\342\337\037\032\n\030\n\017schedule_policy\022\005\332\001\002\030\001\342\337\037\010" +
+      "\022\006\302\001\003\200\005\001\022\036\n\007timeout\030\t \001(\005B\r\342\337\037\t\022\007\262\001\0048d@\000" +
+      "\022I\n\014retry_policy\030\n \001(\0162$.model.StreamJob" +
+      "Schedule.RetryPolicyB\r\342\337\037\t\022\007\332\001\0040\000X\001\022=\n\013r" +
+      "etry_limit\030\013 \001(\005B(\342\337\037\027\n\025\n\014retry_policy\022\005" +
+      "\332\001\002\030\002\342\337\037\t\022\007\262\001\0048d@\000\022@\n\016retry_interval\030\014 \001" +
+      "(\005B(\342\337\037\027\n\025\n\014retry_policy\022\005\332\001\002\030\002\342\337\037\t\022\007\262\001\004" +
+      "8\036@\001\"\\\n\016SchedulePolicy\022\027\n\023SchedulePolicy" +
+      "Unset\020\000\022\017\n\013Periodicity\020\001\022\017\n\013AppointTime\020" +
+      "\002\022\017\n\013Immediately\020\003\"S\n\021ConcurrencyPolicy\022" +
+      "\032\n\026ConcurrencyPolicyUnset\020\000\022\t\n\005Allow\020\001\022\n" +
+      "\n\006Forbid\020\002\022\013\n\007Replace\020\003\"7\n\013RetryPolicy\022\024" +
+      "\n\020RetryPolicyUnset\020\000\022\010\n\004None\020\001\022\010\n\004Auto\020\002" +
+      ":\006\312\262\004\002\n\000\"\273\003\n\020StreamJobRelease\022%\n\010space_i" +
+      "d\030\001 \001(\tB\023\342\337\037\017\022\r\302\001\n\360\001\024\312\002\004wks-\022\037\n\002id\030\002 \001(\t" +
+      "B\023\342\337\037\017\022\r\302\001\n\360\001\024\312\002\004stj-\022\035\n\007version\030\003 \001(\tB\014" +
+      "\342\337\037\010\022\006\302\001\003\360\001\020\022\036\n\004name\030\004 \001(\tB\020\342\337\037\014\022\n\302\001\007\220\002\002" +
+      "\230\002\200\001\0222\n\004type\030\005 \001(\0162\025.model.StreamJob.Typ" +
+      "eB\r\342\337\037\t\022\007\332\001\0040\000X\001\022.\n\006status\030\006 \001(\0162\036.model" +
+      ".StreamJobRelease.Status\022\014\n\004desc\030\007 \001(\t\022#" +
+      "\n\ncreated_by\030\010 \001(\tB\017\342\337\037\013\022\t\302\001\006\200\002\000\210\002A\022\034\n\007c" +
+      "reated\030\t \001(\003B\013\342\337\037\007\022\005\262\001\0020\000\022\034\n\007updated\030\n \001" +
+      "(\003B\013\342\337\037\007\022\005\262\001\0020\000\"M\n\006Status\022\017\n\013StatusUnset" +
+      "\020\000\022\n\n\006Inline\020\001\022\013\n\007Offline\020\002\022\013\n\007Deleted\020\003" +
+      "\022\014\n\010Finished\020\004Bk\n\"com.dataomnis.gproto.t" +
+      "ypes.pbmodelB\020PBModelStreamJobP\000Z1github" +
+      ".com/DataWorkbench/gproto/xgo/types/pbmo" +
+      "delb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14372,7 +14453,7 @@ public final class PBModelStreamJob {
     internal_static_model_StreamJobArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_model_StreamJobArgs_descriptor,
-        new java.lang.String[] { "ClusterId", "Parallelism", "Files", "BuiltInConnectors", "DeleteFiles", "DeleteClusterId", "PyArchives", "PyFiles", "PyRequirements", "PyExecutable", });
+        new java.lang.String[] { "ClusterId", "Parallelism", "Files", "BuiltInConnectors", "DeleteFiles", "DeleteClusterId", "PyArchives", "PyFiles", "PyRequirements", "PyExecutable", "Model", });
     internal_static_model_StreamJobSchedule_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_model_StreamJobSchedule_fieldAccessorTable = new

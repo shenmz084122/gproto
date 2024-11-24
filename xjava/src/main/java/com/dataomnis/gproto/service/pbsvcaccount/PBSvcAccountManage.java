@@ -27,7 +27,7 @@ public final class PBSvcAccountManage {
       "roto\022\007account\032(proto/types/request/accou" +
       "nt_manage.proto\032)proto/types/response/ac" +
       "count_manage.proto\032\035proto/types/model/em" +
-      "pty.proto2\307\n\n\rAccountManage\0226\n\tListUsers" +
+      "pty.proto2\217\013\n\rAccountManage\0226\n\tListUsers" +
       "\022\022.request.ListUsers\032\023.response.ListUser" +
       "s\"\000\0229\n\013DeleteUsers\022\024.request.DeleteUsers" +
       "\032\022.model.EmptyStruct\"\000\022?\n\014DescribeUser\022\025" +
@@ -51,20 +51,22 @@ public final class PBSvcAccountManage {
       "Session\022\026.request.CreateSession\032\027.respon" +
       "se.CreateSession\"\000\022?\n\014CheckSession\022\025.req" +
       "uest.CheckSession\032\026.response.CheckSessio" +
-      "n\"\000\022N\n\021ListNotifications\022\032.request.ListN" +
-      "otifications\032\033.response.ListNotification" +
-      "s\"\000\022W\n\024DescribeNotification\022\035.request.De" +
-      "scribeNotification\032\036.response.DescribeNo" +
-      "tification\"\000\022Q\n\022CreateNotification\022\033.req" +
-      "uest.CreateNotification\032\034.response.Creat" +
-      "eNotification\"\000\022G\n\022UpdateNotification\022\033." +
-      "request.UpdateNotification\032\022.model.Empty" +
-      "Struct\"\000\022I\n\023DeleteNotifications\022\034.reques" +
-      "t.DeleteNotifications\032\022.model.EmptyStruc" +
-      "t\"\000B{\n)com.dataomnis.gproto.service.pbsv" +
-      "caccountB\022PBSvcAccountManageP\000Z8github.c" +
-      "om/DataWorkbench/gproto/xgo/service/pbsv" +
-      "caccountb\006proto3"
+      "n\"\000\022F\n\021CreateSessionAuth\022\026.request.Creat" +
+      "eSession\032\027.response.CreateSession\"\000\022N\n\021L" +
+      "istNotifications\022\032.request.ListNotificat" +
+      "ions\032\033.response.ListNotifications\"\000\022W\n\024D" +
+      "escribeNotification\022\035.request.DescribeNo" +
+      "tification\032\036.response.DescribeNotificati" +
+      "on\"\000\022Q\n\022CreateNotification\022\033.request.Cre" +
+      "ateNotification\032\034.response.CreateNotific" +
+      "ation\"\000\022G\n\022UpdateNotification\022\033.request." +
+      "UpdateNotification\032\022.model.EmptyStruct\"\000" +
+      "\022I\n\023DeleteNotifications\022\034.request.Delete" +
+      "Notifications\032\022.model.EmptyStruct\"\000B{\n)c" +
+      "om.dataomnis.gproto.service.pbsvcaccount" +
+      "B\022PBSvcAccountManageP\000Z8github.com/DataW" +
+      "orkbench/gproto/xgo/service/pbsvcaccount" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

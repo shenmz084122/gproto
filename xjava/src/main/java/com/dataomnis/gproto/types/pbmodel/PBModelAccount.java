@@ -5705,7 +5705,7 @@ public final class PBModelAccount {
      * <pre>
      * The user source. 1 indicates the user is add in local.
      * And 2 indicates the user is add by enfei.
-     * &#64;inject_tag: json:"source" gorm:"column:source"
+     * &#64;inject_tag: json:"source" gorm:"column:source;default:1"
      * </pre>
      *
      * <code>.model.User.Source source = 9;</code>
@@ -5716,7 +5716,7 @@ public final class PBModelAccount {
      * <pre>
      * The user source. 1 indicates the user is add in local.
      * And 2 indicates the user is add by enfei.
-     * &#64;inject_tag: json:"source" gorm:"column:source"
+     * &#64;inject_tag: json:"source" gorm:"column:source;default:1"
      * </pre>
      *
      * <code>.model.User.Source source = 9;</code>
@@ -6536,7 +6536,7 @@ public final class PBModelAccount {
      * <pre>
      * The user source. 1 indicates the user is add in local.
      * And 2 indicates the user is add by enfei.
-     * &#64;inject_tag: json:"source" gorm:"column:source"
+     * &#64;inject_tag: json:"source" gorm:"column:source;default:1"
      * </pre>
      *
      * <code>.model.User.Source source = 9;</code>
@@ -6549,7 +6549,7 @@ public final class PBModelAccount {
      * <pre>
      * The user source. 1 indicates the user is add in local.
      * And 2 indicates the user is add by enfei.
-     * &#64;inject_tag: json:"source" gorm:"column:source"
+     * &#64;inject_tag: json:"source" gorm:"column:source;default:1"
      * </pre>
      *
      * <code>.model.User.Source source = 9;</code>
@@ -7604,7 +7604,7 @@ public final class PBModelAccount {
        * <pre>
        * The user source. 1 indicates the user is add in local.
        * And 2 indicates the user is add by enfei.
-       * &#64;inject_tag: json:"source" gorm:"column:source"
+       * &#64;inject_tag: json:"source" gorm:"column:source;default:1"
        * </pre>
        *
        * <code>.model.User.Source source = 9;</code>
@@ -7617,7 +7617,7 @@ public final class PBModelAccount {
        * <pre>
        * The user source. 1 indicates the user is add in local.
        * And 2 indicates the user is add by enfei.
-       * &#64;inject_tag: json:"source" gorm:"column:source"
+       * &#64;inject_tag: json:"source" gorm:"column:source;default:1"
        * </pre>
        *
        * <code>.model.User.Source source = 9;</code>
@@ -7634,7 +7634,7 @@ public final class PBModelAccount {
        * <pre>
        * The user source. 1 indicates the user is add in local.
        * And 2 indicates the user is add by enfei.
-       * &#64;inject_tag: json:"source" gorm:"column:source"
+       * &#64;inject_tag: json:"source" gorm:"column:source;default:1"
        * </pre>
        *
        * <code>.model.User.Source source = 9;</code>
@@ -7650,7 +7650,7 @@ public final class PBModelAccount {
        * <pre>
        * The user source. 1 indicates the user is add in local.
        * And 2 indicates the user is add by enfei.
-       * &#64;inject_tag: json:"source" gorm:"column:source"
+       * &#64;inject_tag: json:"source" gorm:"column:source;default:1"
        * </pre>
        *
        * <code>.model.User.Source source = 9;</code>
@@ -7670,7 +7670,7 @@ public final class PBModelAccount {
        * <pre>
        * The user source. 1 indicates the user is add in local.
        * And 2 indicates the user is add by enfei.
-       * &#64;inject_tag: json:"source" gorm:"column:source"
+       * &#64;inject_tag: json:"source" gorm:"column:source;default:1"
        * </pre>
        *
        * <code>.model.User.Source source = 9;</code>

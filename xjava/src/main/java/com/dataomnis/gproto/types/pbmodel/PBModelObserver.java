@@ -4587,10 +4587,10 @@ public final class PBModelObserver {
        * &#64;inject_tag: json:"cu_total" gorm:"cu_total;&lt;-:false"
        * </pre>
        *
-       * <code>int64 cu_total = 7;</code>
+       * <code>double cu_total = 7;</code>
        * @return The cuTotal.
        */
-      long getCuTotal();
+      double getCuTotal();
 
       /**
        * <pre>
@@ -4598,10 +4598,10 @@ public final class PBModelObserver {
        * &#64;inject_tag: json:"cu_running" gorm:"cu_running;&lt;-:false"
        * </pre>
        *
-       * <code>int64 cu_running = 8;</code>
+       * <code>double cu_running = 8;</code>
        * @return The cuRunning.
        */
-      long getCuRunning();
+      double getCuRunning();
 
       /**
        * <pre>
@@ -4609,10 +4609,10 @@ public final class PBModelObserver {
        * &#64;inject_tag: json:"cu_stopped" gorm:"cu_stopped;&lt;-:false"
        * </pre>
        *
-       * <code>int64 cu_stopped = 9;</code>
+       * <code>double cu_stopped = 9;</code>
        * @return The cuStopped.
        */
-      long getCuStopped();
+      double getCuStopped();
 
       /**
        * <pre>
@@ -4620,10 +4620,10 @@ public final class PBModelObserver {
        * &#64;inject_tag: json:"cu_starting" gorm:"cu_starting;&lt;-:false"
        * </pre>
        *
-       * <code>int64 cu_starting = 10;</code>
+       * <code>double cu_starting = 10;</code>
        * @return The cuStarting.
        */
-      long getCuStarting();
+      double getCuStarting();
 
       /**
        * <pre>
@@ -4631,10 +4631,10 @@ public final class PBModelObserver {
        * &#64;inject_tag: json:"cu_exception" gorm:"cu_exception;&lt;-:false"
        * </pre>
        *
-       * <code>int64 cu_exception = 11;</code>
+       * <code>double cu_exception = 11;</code>
        * @return The cuException.
        */
-      long getCuException();
+      double getCuException();
 
       /**
        * <pre>
@@ -4642,10 +4642,10 @@ public final class PBModelObserver {
        * &#64;inject_tag: json:"cu_arrears" gorm:"cu_arrears;&lt;-:false"
        * </pre>
        *
-       * <code>int64 cu_arrears = 12;</code>
+       * <code>double cu_arrears = 12;</code>
        * @return The cuArrears.
        */
-      long getCuArrears();
+      double getCuArrears();
     }
     /**
      * Protobuf type {@code model.WorkspaceOverview.FlinkCluster}
@@ -4722,34 +4722,34 @@ public final class PBModelObserver {
                 clusterArrears_ = input.readInt64();
                 break;
               }
-              case 56: {
+              case 57: {
 
-                cuTotal_ = input.readInt64();
+                cuTotal_ = input.readDouble();
                 break;
               }
-              case 64: {
+              case 65: {
 
-                cuRunning_ = input.readInt64();
+                cuRunning_ = input.readDouble();
                 break;
               }
-              case 72: {
+              case 73: {
 
-                cuStopped_ = input.readInt64();
+                cuStopped_ = input.readDouble();
                 break;
               }
-              case 80: {
+              case 81: {
 
-                cuStarting_ = input.readInt64();
+                cuStarting_ = input.readDouble();
                 break;
               }
-              case 88: {
+              case 89: {
 
-                cuException_ = input.readInt64();
+                cuException_ = input.readDouble();
                 break;
               }
-              case 96: {
+              case 97: {
 
-                cuArrears_ = input.readInt64();
+                cuArrears_ = input.readDouble();
                 break;
               }
               default: {
@@ -4881,98 +4881,98 @@ public final class PBModelObserver {
       }
 
       public static final int CU_TOTAL_FIELD_NUMBER = 7;
-      private long cuTotal_;
+      private double cuTotal_;
       /**
        * <pre>
        * The total CU of flink cluster in the workspace.
        * &#64;inject_tag: json:"cu_total" gorm:"cu_total;&lt;-:false"
        * </pre>
        *
-       * <code>int64 cu_total = 7;</code>
+       * <code>double cu_total = 7;</code>
        * @return The cuTotal.
        */
       @java.lang.Override
-      public long getCuTotal() {
+      public double getCuTotal() {
         return cuTotal_;
       }
 
       public static final int CU_RUNNING_FIELD_NUMBER = 8;
-      private long cuRunning_;
+      private double cuRunning_;
       /**
        * <pre>
        * The number CU of flink cluster in the workspace that are in the running status.
        * &#64;inject_tag: json:"cu_running" gorm:"cu_running;&lt;-:false"
        * </pre>
        *
-       * <code>int64 cu_running = 8;</code>
+       * <code>double cu_running = 8;</code>
        * @return The cuRunning.
        */
       @java.lang.Override
-      public long getCuRunning() {
+      public double getCuRunning() {
         return cuRunning_;
       }
 
       public static final int CU_STOPPED_FIELD_NUMBER = 9;
-      private long cuStopped_;
+      private double cuStopped_;
       /**
        * <pre>
        * The number CU of flink cluster in the workspace that are in the stopped status.
        * &#64;inject_tag: json:"cu_stopped" gorm:"cu_stopped;&lt;-:false"
        * </pre>
        *
-       * <code>int64 cu_stopped = 9;</code>
+       * <code>double cu_stopped = 9;</code>
        * @return The cuStopped.
        */
       @java.lang.Override
-      public long getCuStopped() {
+      public double getCuStopped() {
         return cuStopped_;
       }
 
       public static final int CU_STARTING_FIELD_NUMBER = 10;
-      private long cuStarting_;
+      private double cuStarting_;
       /**
        * <pre>
        * The number CU of flink cluster in the workspace that are in the starting status.
        * &#64;inject_tag: json:"cu_starting" gorm:"cu_starting;&lt;-:false"
        * </pre>
        *
-       * <code>int64 cu_starting = 10;</code>
+       * <code>double cu_starting = 10;</code>
        * @return The cuStarting.
        */
       @java.lang.Override
-      public long getCuStarting() {
+      public double getCuStarting() {
         return cuStarting_;
       }
 
       public static final int CU_EXCEPTION_FIELD_NUMBER = 11;
-      private long cuException_;
+      private double cuException_;
       /**
        * <pre>
        * The number CU of flink cluster in the workspace that are in the exception status.
        * &#64;inject_tag: json:"cu_exception" gorm:"cu_exception;&lt;-:false"
        * </pre>
        *
-       * <code>int64 cu_exception = 11;</code>
+       * <code>double cu_exception = 11;</code>
        * @return The cuException.
        */
       @java.lang.Override
-      public long getCuException() {
+      public double getCuException() {
         return cuException_;
       }
 
       public static final int CU_ARREARS_FIELD_NUMBER = 12;
-      private long cuArrears_;
+      private double cuArrears_;
       /**
        * <pre>
        * The number CU of flink cluster in the workspace that are in the arrears status.
        * &#64;inject_tag: json:"cu_arrears" gorm:"cu_arrears;&lt;-:false"
        * </pre>
        *
-       * <code>int64 cu_arrears = 12;</code>
+       * <code>double cu_arrears = 12;</code>
        * @return The cuArrears.
        */
       @java.lang.Override
-      public long getCuArrears() {
+      public double getCuArrears() {
         return cuArrears_;
       }
 
@@ -5008,23 +5008,23 @@ public final class PBModelObserver {
         if (clusterArrears_ != 0L) {
           output.writeInt64(6, clusterArrears_);
         }
-        if (cuTotal_ != 0L) {
-          output.writeInt64(7, cuTotal_);
+        if (java.lang.Double.doubleToRawLongBits(cuTotal_) != 0) {
+          output.writeDouble(7, cuTotal_);
         }
-        if (cuRunning_ != 0L) {
-          output.writeInt64(8, cuRunning_);
+        if (java.lang.Double.doubleToRawLongBits(cuRunning_) != 0) {
+          output.writeDouble(8, cuRunning_);
         }
-        if (cuStopped_ != 0L) {
-          output.writeInt64(9, cuStopped_);
+        if (java.lang.Double.doubleToRawLongBits(cuStopped_) != 0) {
+          output.writeDouble(9, cuStopped_);
         }
-        if (cuStarting_ != 0L) {
-          output.writeInt64(10, cuStarting_);
+        if (java.lang.Double.doubleToRawLongBits(cuStarting_) != 0) {
+          output.writeDouble(10, cuStarting_);
         }
-        if (cuException_ != 0L) {
-          output.writeInt64(11, cuException_);
+        if (java.lang.Double.doubleToRawLongBits(cuException_) != 0) {
+          output.writeDouble(11, cuException_);
         }
-        if (cuArrears_ != 0L) {
-          output.writeInt64(12, cuArrears_);
+        if (java.lang.Double.doubleToRawLongBits(cuArrears_) != 0) {
+          output.writeDouble(12, cuArrears_);
         }
         unknownFields.writeTo(output);
       }
@@ -5059,29 +5059,29 @@ public final class PBModelObserver {
           size += com.google.protobuf.CodedOutputStream
             .computeInt64Size(6, clusterArrears_);
         }
-        if (cuTotal_ != 0L) {
+        if (java.lang.Double.doubleToRawLongBits(cuTotal_) != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt64Size(7, cuTotal_);
+            .computeDoubleSize(7, cuTotal_);
         }
-        if (cuRunning_ != 0L) {
+        if (java.lang.Double.doubleToRawLongBits(cuRunning_) != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt64Size(8, cuRunning_);
+            .computeDoubleSize(8, cuRunning_);
         }
-        if (cuStopped_ != 0L) {
+        if (java.lang.Double.doubleToRawLongBits(cuStopped_) != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt64Size(9, cuStopped_);
+            .computeDoubleSize(9, cuStopped_);
         }
-        if (cuStarting_ != 0L) {
+        if (java.lang.Double.doubleToRawLongBits(cuStarting_) != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt64Size(10, cuStarting_);
+            .computeDoubleSize(10, cuStarting_);
         }
-        if (cuException_ != 0L) {
+        if (java.lang.Double.doubleToRawLongBits(cuException_) != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt64Size(11, cuException_);
+            .computeDoubleSize(11, cuException_);
         }
-        if (cuArrears_ != 0L) {
+        if (java.lang.Double.doubleToRawLongBits(cuArrears_) != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt64Size(12, cuArrears_);
+            .computeDoubleSize(12, cuArrears_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -5110,18 +5110,24 @@ public final class PBModelObserver {
             != other.getClusterException()) return false;
         if (getClusterArrears()
             != other.getClusterArrears()) return false;
-        if (getCuTotal()
-            != other.getCuTotal()) return false;
-        if (getCuRunning()
-            != other.getCuRunning()) return false;
-        if (getCuStopped()
-            != other.getCuStopped()) return false;
-        if (getCuStarting()
-            != other.getCuStarting()) return false;
-        if (getCuException()
-            != other.getCuException()) return false;
-        if (getCuArrears()
-            != other.getCuArrears()) return false;
+        if (java.lang.Double.doubleToLongBits(getCuTotal())
+            != java.lang.Double.doubleToLongBits(
+                other.getCuTotal())) return false;
+        if (java.lang.Double.doubleToLongBits(getCuRunning())
+            != java.lang.Double.doubleToLongBits(
+                other.getCuRunning())) return false;
+        if (java.lang.Double.doubleToLongBits(getCuStopped())
+            != java.lang.Double.doubleToLongBits(
+                other.getCuStopped())) return false;
+        if (java.lang.Double.doubleToLongBits(getCuStarting())
+            != java.lang.Double.doubleToLongBits(
+                other.getCuStarting())) return false;
+        if (java.lang.Double.doubleToLongBits(getCuException())
+            != java.lang.Double.doubleToLongBits(
+                other.getCuException())) return false;
+        if (java.lang.Double.doubleToLongBits(getCuArrears())
+            != java.lang.Double.doubleToLongBits(
+                other.getCuArrears())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -5153,22 +5159,22 @@ public final class PBModelObserver {
             getClusterArrears());
         hash = (37 * hash) + CU_TOTAL_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getCuTotal());
+            java.lang.Double.doubleToLongBits(getCuTotal()));
         hash = (37 * hash) + CU_RUNNING_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getCuRunning());
+            java.lang.Double.doubleToLongBits(getCuRunning()));
         hash = (37 * hash) + CU_STOPPED_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getCuStopped());
+            java.lang.Double.doubleToLongBits(getCuStopped()));
         hash = (37 * hash) + CU_STARTING_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getCuStarting());
+            java.lang.Double.doubleToLongBits(getCuStarting()));
         hash = (37 * hash) + CU_EXCEPTION_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getCuException());
+            java.lang.Double.doubleToLongBits(getCuException()));
         hash = (37 * hash) + CU_ARREARS_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            getCuArrears());
+            java.lang.Double.doubleToLongBits(getCuArrears()));
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -5314,17 +5320,17 @@ public final class PBModelObserver {
 
           clusterArrears_ = 0L;
 
-          cuTotal_ = 0L;
+          cuTotal_ = 0D;
 
-          cuRunning_ = 0L;
+          cuRunning_ = 0D;
 
-          cuStopped_ = 0L;
+          cuStopped_ = 0D;
 
-          cuStarting_ = 0L;
+          cuStarting_ = 0D;
 
-          cuException_ = 0L;
+          cuException_ = 0D;
 
-          cuArrears_ = 0L;
+          cuArrears_ = 0D;
 
           return this;
         }
@@ -5430,22 +5436,22 @@ public final class PBModelObserver {
           if (other.getClusterArrears() != 0L) {
             setClusterArrears(other.getClusterArrears());
           }
-          if (other.getCuTotal() != 0L) {
+          if (other.getCuTotal() != 0D) {
             setCuTotal(other.getCuTotal());
           }
-          if (other.getCuRunning() != 0L) {
+          if (other.getCuRunning() != 0D) {
             setCuRunning(other.getCuRunning());
           }
-          if (other.getCuStopped() != 0L) {
+          if (other.getCuStopped() != 0D) {
             setCuStopped(other.getCuStopped());
           }
-          if (other.getCuStarting() != 0L) {
+          if (other.getCuStarting() != 0D) {
             setCuStarting(other.getCuStarting());
           }
-          if (other.getCuException() != 0L) {
+          if (other.getCuException() != 0D) {
             setCuException(other.getCuException());
           }
-          if (other.getCuArrears() != 0L) {
+          if (other.getCuArrears() != 0D) {
             setCuArrears(other.getCuArrears());
           }
           this.mergeUnknownFields(other.unknownFields);
@@ -5753,18 +5759,18 @@ public final class PBModelObserver {
           return this;
         }
 
-        private long cuTotal_ ;
+        private double cuTotal_ ;
         /**
          * <pre>
          * The total CU of flink cluster in the workspace.
          * &#64;inject_tag: json:"cu_total" gorm:"cu_total;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_total = 7;</code>
+         * <code>double cu_total = 7;</code>
          * @return The cuTotal.
          */
         @java.lang.Override
-        public long getCuTotal() {
+        public double getCuTotal() {
           return cuTotal_;
         }
         /**
@@ -5773,11 +5779,11 @@ public final class PBModelObserver {
          * &#64;inject_tag: json:"cu_total" gorm:"cu_total;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_total = 7;</code>
+         * <code>double cu_total = 7;</code>
          * @param value The cuTotal to set.
          * @return This builder for chaining.
          */
-        public Builder setCuTotal(long value) {
+        public Builder setCuTotal(double value) {
           
           cuTotal_ = value;
           onChanged();
@@ -5789,28 +5795,28 @@ public final class PBModelObserver {
          * &#64;inject_tag: json:"cu_total" gorm:"cu_total;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_total = 7;</code>
+         * <code>double cu_total = 7;</code>
          * @return This builder for chaining.
          */
         public Builder clearCuTotal() {
           
-          cuTotal_ = 0L;
+          cuTotal_ = 0D;
           onChanged();
           return this;
         }
 
-        private long cuRunning_ ;
+        private double cuRunning_ ;
         /**
          * <pre>
          * The number CU of flink cluster in the workspace that are in the running status.
          * &#64;inject_tag: json:"cu_running" gorm:"cu_running;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_running = 8;</code>
+         * <code>double cu_running = 8;</code>
          * @return The cuRunning.
          */
         @java.lang.Override
-        public long getCuRunning() {
+        public double getCuRunning() {
           return cuRunning_;
         }
         /**
@@ -5819,11 +5825,11 @@ public final class PBModelObserver {
          * &#64;inject_tag: json:"cu_running" gorm:"cu_running;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_running = 8;</code>
+         * <code>double cu_running = 8;</code>
          * @param value The cuRunning to set.
          * @return This builder for chaining.
          */
-        public Builder setCuRunning(long value) {
+        public Builder setCuRunning(double value) {
           
           cuRunning_ = value;
           onChanged();
@@ -5835,28 +5841,28 @@ public final class PBModelObserver {
          * &#64;inject_tag: json:"cu_running" gorm:"cu_running;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_running = 8;</code>
+         * <code>double cu_running = 8;</code>
          * @return This builder for chaining.
          */
         public Builder clearCuRunning() {
           
-          cuRunning_ = 0L;
+          cuRunning_ = 0D;
           onChanged();
           return this;
         }
 
-        private long cuStopped_ ;
+        private double cuStopped_ ;
         /**
          * <pre>
          * The number CU of flink cluster in the workspace that are in the stopped status.
          * &#64;inject_tag: json:"cu_stopped" gorm:"cu_stopped;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_stopped = 9;</code>
+         * <code>double cu_stopped = 9;</code>
          * @return The cuStopped.
          */
         @java.lang.Override
-        public long getCuStopped() {
+        public double getCuStopped() {
           return cuStopped_;
         }
         /**
@@ -5865,11 +5871,11 @@ public final class PBModelObserver {
          * &#64;inject_tag: json:"cu_stopped" gorm:"cu_stopped;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_stopped = 9;</code>
+         * <code>double cu_stopped = 9;</code>
          * @param value The cuStopped to set.
          * @return This builder for chaining.
          */
-        public Builder setCuStopped(long value) {
+        public Builder setCuStopped(double value) {
           
           cuStopped_ = value;
           onChanged();
@@ -5881,28 +5887,28 @@ public final class PBModelObserver {
          * &#64;inject_tag: json:"cu_stopped" gorm:"cu_stopped;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_stopped = 9;</code>
+         * <code>double cu_stopped = 9;</code>
          * @return This builder for chaining.
          */
         public Builder clearCuStopped() {
           
-          cuStopped_ = 0L;
+          cuStopped_ = 0D;
           onChanged();
           return this;
         }
 
-        private long cuStarting_ ;
+        private double cuStarting_ ;
         /**
          * <pre>
          * The number CU of flink cluster in the workspace that are in the starting status.
          * &#64;inject_tag: json:"cu_starting" gorm:"cu_starting;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_starting = 10;</code>
+         * <code>double cu_starting = 10;</code>
          * @return The cuStarting.
          */
         @java.lang.Override
-        public long getCuStarting() {
+        public double getCuStarting() {
           return cuStarting_;
         }
         /**
@@ -5911,11 +5917,11 @@ public final class PBModelObserver {
          * &#64;inject_tag: json:"cu_starting" gorm:"cu_starting;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_starting = 10;</code>
+         * <code>double cu_starting = 10;</code>
          * @param value The cuStarting to set.
          * @return This builder for chaining.
          */
-        public Builder setCuStarting(long value) {
+        public Builder setCuStarting(double value) {
           
           cuStarting_ = value;
           onChanged();
@@ -5927,28 +5933,28 @@ public final class PBModelObserver {
          * &#64;inject_tag: json:"cu_starting" gorm:"cu_starting;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_starting = 10;</code>
+         * <code>double cu_starting = 10;</code>
          * @return This builder for chaining.
          */
         public Builder clearCuStarting() {
           
-          cuStarting_ = 0L;
+          cuStarting_ = 0D;
           onChanged();
           return this;
         }
 
-        private long cuException_ ;
+        private double cuException_ ;
         /**
          * <pre>
          * The number CU of flink cluster in the workspace that are in the exception status.
          * &#64;inject_tag: json:"cu_exception" gorm:"cu_exception;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_exception = 11;</code>
+         * <code>double cu_exception = 11;</code>
          * @return The cuException.
          */
         @java.lang.Override
-        public long getCuException() {
+        public double getCuException() {
           return cuException_;
         }
         /**
@@ -5957,11 +5963,11 @@ public final class PBModelObserver {
          * &#64;inject_tag: json:"cu_exception" gorm:"cu_exception;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_exception = 11;</code>
+         * <code>double cu_exception = 11;</code>
          * @param value The cuException to set.
          * @return This builder for chaining.
          */
-        public Builder setCuException(long value) {
+        public Builder setCuException(double value) {
           
           cuException_ = value;
           onChanged();
@@ -5973,28 +5979,28 @@ public final class PBModelObserver {
          * &#64;inject_tag: json:"cu_exception" gorm:"cu_exception;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_exception = 11;</code>
+         * <code>double cu_exception = 11;</code>
          * @return This builder for chaining.
          */
         public Builder clearCuException() {
           
-          cuException_ = 0L;
+          cuException_ = 0D;
           onChanged();
           return this;
         }
 
-        private long cuArrears_ ;
+        private double cuArrears_ ;
         /**
          * <pre>
          * The number CU of flink cluster in the workspace that are in the arrears status.
          * &#64;inject_tag: json:"cu_arrears" gorm:"cu_arrears;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_arrears = 12;</code>
+         * <code>double cu_arrears = 12;</code>
          * @return The cuArrears.
          */
         @java.lang.Override
-        public long getCuArrears() {
+        public double getCuArrears() {
           return cuArrears_;
         }
         /**
@@ -6003,11 +6009,11 @@ public final class PBModelObserver {
          * &#64;inject_tag: json:"cu_arrears" gorm:"cu_arrears;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_arrears = 12;</code>
+         * <code>double cu_arrears = 12;</code>
          * @param value The cuArrears to set.
          * @return This builder for chaining.
          */
-        public Builder setCuArrears(long value) {
+        public Builder setCuArrears(double value) {
           
           cuArrears_ = value;
           onChanged();
@@ -6019,12 +6025,12 @@ public final class PBModelObserver {
          * &#64;inject_tag: json:"cu_arrears" gorm:"cu_arrears;&lt;-:false"
          * </pre>
          *
-         * <code>int64 cu_arrears = 12;</code>
+         * <code>double cu_arrears = 12;</code>
          * @return This builder for chaining.
          */
         public Builder clearCuArrears() {
           
-          cuArrears_ = 0L;
+          cuArrears_ = 0D;
           onChanged();
           return this;
         }
@@ -7831,10 +7837,10 @@ public final class PBModelObserver {
       "total\030\001 \001(\003\022\027\n\017cluster_running\030\002 \001(\003\022\027\n\017" +
       "cluster_stopped\030\003 \001(\003\022\030\n\020cluster_startin" +
       "g\030\004 \001(\003\022\031\n\021cluster_exception\030\005 \001(\003\022\027\n\017cl" +
-      "uster_arrears\030\006 \001(\003\022\020\n\010cu_total\030\007 \001(\003\022\022\n" +
-      "\ncu_running\030\010 \001(\003\022\022\n\ncu_stopped\030\t \001(\003\022\023\n" +
-      "\013cu_starting\030\n \001(\003\022\024\n\014cu_exception\030\013 \001(\003" +
-      "\022\022\n\ncu_arrears\030\014 \001(\003Bj\n\"com.dataomnis.gp" +
+      "uster_arrears\030\006 \001(\003\022\020\n\010cu_total\030\007 \001(\001\022\022\n" +
+      "\ncu_running\030\010 \001(\001\022\022\n\ncu_stopped\030\t \001(\001\022\023\n" +
+      "\013cu_starting\030\n \001(\001\022\024\n\014cu_exception\030\013 \001(\001" +
+      "\022\022\n\ncu_arrears\030\014 \001(\001Bj\n\"com.dataomnis.gp" +
       "roto.types.pbmodelB\017PBModelObserverP\000Z1g" +
       "ithub.com/DataWorkbench/gproto/xgo/types" +
       "/pbmodelb\006proto3"
