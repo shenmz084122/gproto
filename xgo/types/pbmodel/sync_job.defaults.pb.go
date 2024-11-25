@@ -264,6 +264,16 @@ func (this *SyncResource) SetDefaults() {
 			dt.SetDefaults()
 		}
 	}
+	if this.MqttSource != nil {
+		if dt, ok := interface{}(this.MqttSource).(interface{ SetDefaults() }); ok {
+			dt.SetDefaults()
+		}
+	}
+	if this.WebapiSource != nil {
+		if dt, ok := interface{}(this.WebapiSource).(interface{ SetDefaults() }); ok {
+			dt.SetDefaults()
+		}
+	}
 	return
 }
 

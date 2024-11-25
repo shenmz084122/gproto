@@ -153,3 +153,19 @@ func (this *OceanBaseURL) SetDefaults() {
 	}
 	return
 }
+
+// Set default value for message datasource.MqttURL
+func (this *MqttURL) SetDefaults() {
+	if this == nil {
+		return
+	}
+	return
+}
+
+// Set default value for message datasource.WebApiURL
+func (this *WebApiURL) SetDefaults() {
+	if this == nil {
+		return
+	}
+	return
+}

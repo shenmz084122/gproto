@@ -51,14 +51,14 @@ func (this *DataSource) _xxx_xxx_Validator_Validate_desc() error {
 	return nil
 }
 
-var _xxx_xxx_Validator_DataSource_InEnums_Type = map[DataSource_Type]bool{0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true, 17: true}
+var _xxx_xxx_Validator_DataSource_InEnums_Type = map[DataSource_Type]bool{0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true, 17: true, 18: true, 19: true}
 
 func (this *DataSource) _xxx_xxx_Validator_Validate_type() error {
 	if !(this.Type > 0) {
 		return protovalidator.FieldError1("DataSource", "the value of field 'type' must be greater than '0'", protovalidator.Int32ToString(int32(this.Type)))
 	}
 	if !(_xxx_xxx_Validator_DataSource_InEnums_Type[this.Type]) {
-		return protovalidator.FieldError1("DataSource", "the value of field 'type' must in enums of '[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17]'", protovalidator.Int32ToString(int32(this.Type)))
+		return protovalidator.FieldError1("DataSource", "the value of field 'type' must in enums of '[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19]'", protovalidator.Int32ToString(int32(this.Type)))
 	}
 	return nil
 }
@@ -166,14 +166,14 @@ func (this *DataSource) Validate() error {
 	return nil
 }
 
-var _xxx_xxx_Validator_DataSource_URL_InEnums_Type = map[DataSource_Type]bool{0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true, 17: true}
+var _xxx_xxx_Validator_DataSource_URL_InEnums_Type = map[DataSource_Type]bool{0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true, 10: true, 11: true, 12: true, 13: true, 14: true, 15: true, 16: true, 17: true, 18: true, 19: true}
 
 func (this *DataSource_URL) _xxx_xxx_Validator_Validate_type() error {
 	if !(this.Type > 0) {
 		return protovalidator.FieldError1("DataSource_URL", "the value of field 'type' must be greater than '0'", protovalidator.Int32ToString(int32(this.Type)))
 	}
 	if !(_xxx_xxx_Validator_DataSource_URL_InEnums_Type[this.Type]) {
-		return protovalidator.FieldError1("DataSource_URL", "the value of field 'type' must in enums of '[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17]'", protovalidator.Int32ToString(int32(this.Type)))
+		return protovalidator.FieldError1("DataSource_URL", "the value of field 'type' must in enums of '[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19]'", protovalidator.Int32ToString(int32(this.Type)))
 	}
 	return nil
 }
@@ -552,6 +552,50 @@ func (this *DataSource_URL) _xxx_xxx_Validator_Validate_oceanbase() error {
 	return nil
 }
 
+func (this *DataSource_URL) _xxx_xxx_Validator_CheckIf_mqtt() bool {
+	if !(this.Type == 18) {
+		return false
+	}
+	return true
+}
+
+func (this *DataSource_URL) _xxx_xxx_Validator_Validate_mqtt() error {
+	if !this._xxx_xxx_Validator_CheckIf_mqtt() {
+		return nil
+	}
+	if !(this.Mqtt != nil) {
+		return protovalidator.FieldError2("DataSource_URL", "the value of field 'mqtt' cannot be null")
+	}
+	if dt, ok := interface{}(this.Mqtt).(interface{ Validate() error }); ok {
+		if err := dt.Validate(); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
+func (this *DataSource_URL) _xxx_xxx_Validator_CheckIf_webapi() bool {
+	if !(this.Type == 19) {
+		return false
+	}
+	return true
+}
+
+func (this *DataSource_URL) _xxx_xxx_Validator_Validate_webapi() error {
+	if !this._xxx_xxx_Validator_CheckIf_webapi() {
+		return nil
+	}
+	if !(this.Webapi != nil) {
+		return protovalidator.FieldError2("DataSource_URL", "the value of field 'webapi' cannot be null")
+	}
+	if dt, ok := interface{}(this.Webapi).(interface{ Validate() error }); ok {
+		if err := dt.Validate(); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
 // Set default value for message model.DataSource.URL
 func (this *DataSource_URL) Validate() error {
 	if this == nil {
@@ -609,6 +653,12 @@ func (this *DataSource_URL) Validate() error {
 		return err
 	}
 	if err := this._xxx_xxx_Validator_Validate_oceanbase(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_mqtt(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_webapi(); err != nil {
 		return err
 	}
 	return nil

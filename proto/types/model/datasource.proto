@@ -45,6 +45,8 @@ message DataSource {
     MongoDb = 15;
     Redis = 16;
     OceanBase = 17;
+    Mqtt = 18;
+    WebApi = 19;
   }
 
   // URL of datasource settings.
@@ -53,7 +55,7 @@ message DataSource {
 
     // Source Type, one of 12345678 1->MySQL/2->PostgreSQL/3->Kafka/4->S3/5->ClickHouse/6->Hbase/7->Ftp/8->HDFS
     // @inject_tag: json:"-"
-    Type type = 18  [ (validator.field).tags.enum = { gt: 0; in_enums: true } ];
+    Type type = 20  [ (validator.field).tags.enum = { gt: 0; in_enums: true } ];
 
     // MySQL Source Connection Info.
     // @inject_tag: json:"mysql"
@@ -165,6 +167,14 @@ message DataSource {
     // @inject_tag: json:"oceanbase"
     datasource.OceanBaseURL oceanbase = 17 [
       (validator.field).check_if = {field: "type", tags: { enum: { eq: 17 } } },
+      (validator.field).tags.message = { not_null: true }
+    ];
+    datasource.MqttURL mqtt = 18 [
+      (validator.field).check_if = {field: "type", tags: { enum: { eq: 18 } } },
+      (validator.field).tags.message = { not_null: true }
+    ];
+    datasource.WebApiURL webapi = 19 [
+      (validator.field).check_if = {field: "type", tags: { enum: { eq: 19 } } },
       (validator.field).tags.message = { not_null: true }
     ];
   }

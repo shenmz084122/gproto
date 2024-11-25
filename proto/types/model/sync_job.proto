@@ -328,6 +328,9 @@ message SyncResource {
     // oceanbase target
     // @inject_tag: json:"oceanbase_target"
     DBTarget oceanbase_target = 34;
+
+    DBSource mqtt_source = 35;
+    DBSource webapi_source = 36;
 }
 
 // SyncJobSchedule represents a job schedule info.

@@ -119,6 +119,16 @@ func (this *DataSource_URL) SetDefaults() {
 			dt.SetDefaults()
 		}
 	}
+	if this.Mqtt != nil {
+		if dt, ok := interface{}(this.Mqtt).(interface{ SetDefaults() }); ok {
+			dt.SetDefaults()
+		}
+	}
+	if this.Webapi != nil {
+		if dt, ok := interface{}(this.Webapi).(interface{ SetDefaults() }); ok {
+			dt.SetDefaults()
+		}
+	}
 	return
 }
 

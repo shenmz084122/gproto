@@ -1087,3 +1087,84 @@ func (this *OceanBaseURL) Validate() error {
 	}
 	return nil
 }
+
+func (this *MqttURL) _xxx_xxx_Validator_Validate_host() error {
+	if !(len(this.Host) >= 1) {
+		return protovalidator.FieldError1("MqttURL", "the byte length of field 'host' must be greater than or equal to '1'", protovalidator.StringByteLenToString(this.Host))
+	}
+	if !(len(this.Host) <= 64) {
+		return protovalidator.FieldError1("MqttURL", "the byte length of field 'host' must be less than or equal to '64'", protovalidator.StringByteLenToString(this.Host))
+	}
+	return nil
+}
+
+func (this *MqttURL) _xxx_xxx_Validator_Validate_port() error {
+	if !(this.Port >= 0) {
+		return protovalidator.FieldError1("MqttURL", "the value of field 'port' must be greater than or equal to '0'", protovalidator.Int32ToString(this.Port))
+	}
+	if !(this.Port <= 65536) {
+		return protovalidator.FieldError1("MqttURL", "the value of field 'port' must be less than or equal to '65536'", protovalidator.Int32ToString(this.Port))
+	}
+	return nil
+}
+
+func (this *MqttURL) _xxx_xxx_Validator_Validate_topic() error {
+	if !(len(this.Topic) >= 1) {
+		return protovalidator.FieldError1("MqttURL", "the byte length of field 'topic' must be greater than or equal to '1'", protovalidator.StringByteLenToString(this.Topic))
+	}
+	if !(len(this.Topic) <= 64) {
+		return protovalidator.FieldError1("MqttURL", "the byte length of field 'topic' must be less than or equal to '64'", protovalidator.StringByteLenToString(this.Topic))
+	}
+	return nil
+}
+
+// Set default value for message datasource.MqttURL
+func (this *MqttURL) Validate() error {
+	if this == nil {
+		return nil
+	}
+	if err := this._xxx_xxx_Validator_Validate_host(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_port(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_topic(); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (this *WebApiURL) _xxx_xxx_Validator_Validate_host() error {
+	if !(len(this.Host) >= 1) {
+		return protovalidator.FieldError1("WebApiURL", "the byte length of field 'host' must be greater than or equal to '1'", protovalidator.StringByteLenToString(this.Host))
+	}
+	if !(len(this.Host) <= 64) {
+		return protovalidator.FieldError1("WebApiURL", "the byte length of field 'host' must be less than or equal to '64'", protovalidator.StringByteLenToString(this.Host))
+	}
+	return nil
+}
+
+func (this *WebApiURL) _xxx_xxx_Validator_Validate_port() error {
+	if !(this.Port >= 0) {
+		return protovalidator.FieldError1("WebApiURL", "the value of field 'port' must be greater than or equal to '0'", protovalidator.Int32ToString(this.Port))
+	}
+	if !(this.Port <= 65536) {
+		return protovalidator.FieldError1("WebApiURL", "the value of field 'port' must be less than or equal to '65536'", protovalidator.Int32ToString(this.Port))
+	}
+	return nil
+}
+
+// Set default value for message datasource.WebApiURL
+func (this *WebApiURL) Validate() error {
+	if this == nil {
+		return nil
+	}
+	if err := this._xxx_xxx_Validator_Validate_host(); err != nil {
+		return err
+	}
+	if err := this._xxx_xxx_Validator_Validate_port(); err != nil {
+		return err
+	}
+	return nil
+}
