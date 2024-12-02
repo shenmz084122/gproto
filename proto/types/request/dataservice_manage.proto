@@ -188,6 +188,8 @@ message UpdateApiConfig {
   model.RequestParameters request_params = 17;
   // @inject_tag: json:"response_params"
   model.ResponseParameters response_params = 18;
+  string where = 19 [ (validator.field) = { } ];
+
 }
 
 message DescribeApiConfig {
