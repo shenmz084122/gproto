@@ -168,6 +168,7 @@ message ApiConfig {
   RequestParameters request_params = 22 [(validator.field) = {}];
   // @inject_tag: json:"response_params" gorm:"column:response_params;type:json"
   ResponseParameters response_params = 23 [(validator.field) = {}];
+  string  where = 24 [ (validator.field) = { } ];
 }
 
 message RequestParameters {
