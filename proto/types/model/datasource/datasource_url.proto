@@ -506,4 +506,6 @@ message WebApiURL {
   string url = 3 ;
   string head = 4 ;
   string body = 5 ;
+  string fields = 6;
+  string intervalTime = 7;
 }
