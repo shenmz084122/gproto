@@ -105,7 +105,7 @@ message SyncJob {
     // @inject_tag: json:"source_type" gorm:"column:source_type;"
     DataSource.Type source_type = 13 [
         (validator.field).check_if = { field: "is_directory", tags: { bool: { eq: false } } },
-        (defaults.field).basic = "0",(validator.field).tags.enum = { gt: 0,lte: 17; in_enums: true  } ];
+        (defaults.field).basic = "0",(validator.field).tags.enum = { gt: 0,lte: 19; in_enums: true  } ];
     // The sync task target type.
     // @inject_tag: json:"target_type" gorm:"column:target_type;"
     DataSource.Type target_type = 14 [
